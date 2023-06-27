@@ -24,3 +24,14 @@ Array object in NumPy is ndarray meaning n-dimensional array.
 ## To find type of arrays
 1. number_type = np.array([1,2,3,4,5]) # number_type.dtype => prints its type
 2. string_type = np.array(['anjila']) # string_type => prints its type as ```<U6```, this means 6 length character. i.e unicode string with 6 character length.
+
+### To create multi dimensional array
+1. two_d_array = [[1,2,3], [7,8,9]]
+2. By reshaping 1-D array into 2D array.
+one_dimensional_arr = [1,2,3,4,5,6]
+ np.reshape(one_dimensional_arr, (2,3))  # Two rows and three columns.
+
+## To find dimensions & shape
+1. two_d_array.ndim # prints 2
+2. two_d_array.shape # row * column
+3. two_d_array.size # total number of elements
