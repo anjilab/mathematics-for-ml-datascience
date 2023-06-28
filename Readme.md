@@ -35,3 +35,21 @@ one_dimensional_arr = [1,2,3,4,5,6]
 1. two_d_array.ndim # prints 2
 2. two_d_array.shape # row * column
 3. two_d_array.size # total number of elements
+
+### Array operation
+Numpy array can be added,subtracted & multiplied
+array_1 = np.array([1,2,3])
+array_2 = np.array([4,5,6])
+array_1 + array_2
+array_1 - array_2
+array_1 * array_2
+
+# Broadcasting
+
+While converting one units to another units like m to  km, l to ml and so on, we multiply array with scalar units. For eg:
+array_1 = np.array([1,2])
+array_1 * 2 # it is mulitplying array with single number. Such concept which allows to perform mathematical operations on arrays of different shapes.
+
+
+
+
