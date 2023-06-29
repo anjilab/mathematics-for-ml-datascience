@@ -53,3 +53,4 @@ array_1 * 2 # it is mulitplying array with single number. Such concept which all
 
 
 
+
