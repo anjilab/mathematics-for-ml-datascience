@@ -51,6 +51,14 @@ array_1 = np.array([1,2])
 array_1 * 2 # it is mulitplying array with single number. Such concept which allows to perform mathematical operations on arrays of different shapes.
 
 
+# Slicing 
+Slicing allows you to get sub elements or specific elements list from the array. It needs start & end values,begins from start, includes start but do not include end value. eg:array[start:end:step]
+[1,24,45,78,99][1:3:2]
+
+# Stacking
+feature of numpy for customization of numpy arrays. to join two or more arrays either horizontally or vertically, done along a new axis.
+
+
 
 
 
