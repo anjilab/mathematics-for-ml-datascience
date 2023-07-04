@@ -59,6 +59,9 @@ Slicing allows you to get sub elements or specific elements list from the array.
 feature of numpy for customization of numpy arrays. to join two or more arrays either horizontally or vertically, done along a new axis.
 
 
+np.hstack((array1,array2))
+np.hsplit((array1, how_many_array))
+np.vstack((array1,array2))
 
 
 
