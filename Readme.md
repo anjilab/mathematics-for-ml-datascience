@@ -64,4 +64,10 @@ np.hsplit((array1, how_many_array))
 np.vstack((array1,array2))
 
 
+## Week 1 Lab 2  Solving linear equations
+
+-x1 + 3x2 = 7 & 3x1 + 2x2 = 1 are two linear equations. 
+Linear system is said to be consistent if it has no solution and said to be consistent if it has more than one or infinite number of solutions.
+
+
 
