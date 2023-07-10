@@ -69,5 +69,13 @@ np.vstack((array1,array2))
 -x1 + 3x2 = 7 & 3x1 + 2x2 = 1 are two linear equations. 
 Linear system is said to be consistent if it has no solution and said to be consistent if it has more than one or infinite number of solutions.
 
+We can solve linear equation using matrices and np.linalg.solve(a,b) where a = np.array([
+        [-1, 3],
+        [3, 2]
+    ], dtype=np.dtype(float))
 
+b = np.array([7, 1], dtype=np.dtype(float))
+
+To find determinant of matrix: 
+determinant= np.linalg.det(a)
 
