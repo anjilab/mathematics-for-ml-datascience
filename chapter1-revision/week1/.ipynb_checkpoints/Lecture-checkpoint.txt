@@ -1,0 +1,60 @@
+- System of sentences
+    - The dog is black and the cat is orange ⇒ 4 clear information, 2 animals, 2 colors ⇒ complete sentences and are non-singular
+    - The dog is black and the dog is black ⇒ same information ⇒ redundant ⇒ singular
+    - The dog is black and the dog is white ⇒ 1 animal 2 color ⇒ contradiction ⇒ singular
+- System of equations
+    
+   
+    a + b =10
+    a + 2b = 12
+    This system of equations  has unique  solutions,  complete  and  non-singular
+    
+    a+b = 10 
+    2a + 2b = 20, => a + b =10 
+    This  system  of  equations has  infinite  solutions,  redundant  and  singular 
+    
+    a+b = 10 
+    2a + 2b = 24, 
+    This  system  of equations  has no   solutions, contradiction  and  singular 
+    
+    
+- Linear equation
+    - Variables with power equal to 1.
+    - if 2 variables only, represented as line
+    - if 3 variables then represented as plane
+
+- System of equation as line
+    - When 2 lines in the x-y plane are brought togther then, system of equation deals with two equation in a same plane.
+    - These lines will either intersects at a point(single unique solution for those system of equations), never meet(parallel, no solutions exist), coincide/overlap(infinite solutions).
+    - At the end, they will always be in the plane. if it intersect at a point then that is said to be unique solution for those equations. 
+    - Complete informations, intersects a point, non-singular
+    - redundant, coincides, singular
+    - contradiction, parallel, singular
+
+- Singularity & Non-singularity in terms of geometric interpretation:
+
+    - Complete, redundant and contradiction are not widely used, as this are based on the value of equation in right hand side.
+    - So make the equating values to 0 and again check the completeness and redundant and contradiction will the output of singularity change ? 
+    - No. The singularity concept won't change even if equations kind is changed.
+
+    a + b = 0 
+    a + 2b = 0
+    This system of equations  has unique  solutions,  complete  and  non-singular
+    
+    a+b = 0
+    2a + 2b = 0, => a + b =0 
+    This  system  of  equations has  infinite  solutions,  redundant  and  singular 
+    
+    a+b = 0 
+    2a + 2b = 0, 
+    This  system  of equations  has infinite solutions, redundant  and  singular 
+
+So, the constants in the equation is not so important.
+
+
+- The system of equation can be represented in matrix form. After determining the solution, we can know whether it is singular or not. Their corresponding matrix form of the equation can be called as singular and non-singular matrix. 
+
+
+- Without finding the  number of solutions of equation, we can also determine whether corresponding system of equation matrix can be singular or non-singular.
+
+- 
