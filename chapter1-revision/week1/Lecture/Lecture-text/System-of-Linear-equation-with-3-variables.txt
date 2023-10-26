@@ -1,0 +1,105 @@
+In linear equation with 3 variables, there must be 3 equation to solve get the values of those variables but sometimes these information can be redundant and hence we might not be able to get value of 3 variables.
+
+a + b + c = 10
+a + 2b + c = 15
+a + b + 2c = 12
+
+In above equation, we can have unique solutions, as information is complete. non-singular. 
+For checking singularity, we can make value of 10,15,12 set to 0 and then get the values of a,b & c. We will get (0,0,0), which is unique and complete. hence non-singular.
+
+
+a + b + c = 10
+a + b + 2c = 15
+a + b + 3c = 20 
+
+In above equation, we have infinite solutions as when c = 5 a + b = 5 so any values like (1,4,5),(2,3,5),(0,5,5) are one of the solutions. Redundant, singular. 
+Another method for singularity is to make, constants in RHS to 0, Again, the information is redundant and hence singular.
+
+a + b + c = 10
+a + b + 2c = 15
+a + b + 3c = 18
+
+In above equation, we can see that in a + b + 2c = 15 
+a + b + c + c = 15
+10 + c = 15
+c = 5
+Similarly, a + b + c + 2c = 18 in equation 3, 
+10 + 2c = 18
+2c = 8
+c = 4
+
+Here, we get c = 5 and c = 4, which is contradiction, hence no solutions.  singular.
+
+a + b + c = 10
+2a + 2b + 2c = 20
+3a + 3b + 3c = 30 
+
+In above equation, all three line provides same information, i.e a + b + c = 10, hence infinite many solutions (1,2,7), (0,9,1), (2,3,5) So, redundant, singular.
+
+Likewise, in 2 variables, in 3 variables too we can make the R.H.S to 0, and check about singularity.
+
+
+- Linear equation with 3 variables will represent planes. Any point passing through the plane will be solution for the plane.
+
+When, a + b + c = 0
+a + 2b + c = 0
+a + b + 2c = 0, these equation are visualized, each equation will have a plane and when brought in same plane. All these will intersect in a point. Hence, non-singluar. 
+
+But for, a + b + c = 0
+a + b + 2c = 0
+a + b + 3c = 0, when each equation is drawn, we will get plane and then all 3 when brought to single plain we will find that these will intersect at a line. So not just a point but infinite points in a line. So singular.
+
+
+a + b + c = 0
+2a + 2b + 2c = 0
+3a + 3b + 3c = 0, This all will overlap each other in the same plane. Hence infinte number of points in the plane making infinite solution, resulting to singular.
+
+a + b + c = 10
+a + b + 2c = 17
+a + b + 3c = 18
+This when drawn together in the same plane, they will become parallel. Hence no solutions making singular.
+
+When, a = 1, b= 2 , a + b = 3 these can be represented as,a = 1 as 1.a + 0.b + 0.c = 1
+b = 2 as 0.a + 1.b + 0.c  = 2
+a + b =3 as 1.a + 1.b + 0.c = 3
+[ 1 0 0 
+0 1 0 
+1 1 0 ]
+Row 3 we can see that will be expressed in terms of sum of row 1 and row 2. Row 3 doesn't provide any new information hence row 3 is linearly dependent upon row 1 and row 2. So, both matrix and system are singular.
+
+a  + b  + c = 0
+2a + 2b + 2c = 0
+3a + 3b + 3c = 0 
+
+[1 1 1
+2 2 2
+3 3 3] 
+Here Row 2 = 2 * Row 1 
+Row 3 =  3 * Row 1 
+So, both plane 2 and plane 3 do not provide any new information. Hence, Linear dependent and singular.
+
+a + b + c = 0
+a + b + 2c = 0
+a + b + 3c = 0
+[1 1 1
+1 1 2
+1 1 3]
+Here, add row 1 and row 2 we will get 2a + 2b + 4c = 0, then dividing by 2 we will get a + b + 2c  = 0. Therefore, average of row 1 and row 3 will give rise to row 2. Hence linearly dependent and singular.
+
+
+a + b + c = 0
+a + 2b + c = 0
+a + b + 2c = 0
+
+Here, [1 1 1
+1 2 1
+1 1 2], Here, no matter what we add subtract or divide, it is not possible to obtain one rows being expressed in terms of other. Hence linear independent and non-singular.
+
+When matrix are bigger and bigger,it become difficult to find the relationship of rows and find linear dependency to determine singularity. Hence we use determinant.
+
+
+
+
+
+
+
