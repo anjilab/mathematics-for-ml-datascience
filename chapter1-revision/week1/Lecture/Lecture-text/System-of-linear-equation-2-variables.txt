@@ -57,4 +57,17 @@ So, the constants in the equation is not so important.
 
 - Without finding the  number of solutions of equation, we can also determine whether corresponding system of equation matrix can be singular or non-singular.
 
+- By finding whether rows are dependent or not. If no row can form another row then linearly independent. Similarly if any rows can be expressed in terms of another rows then we called linearly independent.
+
+- Finding matrix whether singular or non-singular by using determinant.
+- [[a ,b][c,d]] => Linear dependency if a*k =  c or b*k =  d => c/a = d/b = k => ad = bc => ad - bc = 0 => Which is called determinant of matrix. 
+- So, for singular ad -bc = 0 for non singular matrix ad - bc != 0.
+
+- Summary of Week 1, Chapter 1, Linear equation with 2 variables:
+- System of equations with 2 variables will plot line. When the equations are given, it means that two lines are in the plane and either they intersect each other at a point, overlaps or become parallel.
+- When the lines are intersected, that means, there are sufficient information to make the equation complete, hence unique solution, non-singular. If represented in the matrix, the value after equals can be converted into 0 and check the same, the equation beome complete and solution will be unique following the property of non-singularity. In such equation,checking whether one row can be represented into another row,it will not. Hence linearly independent.
+- When the lines provide same information, then redundant, infinite solutions, singular. The rows of one equation is same or multiple of another hence, linearly dependent making further confirm towards singular. Again, calculating determinant will be 0. Hence, singular matrix.
+- When the lines provide information that contradicts then these lines together in a plane will not have a solution and are singular. The rows of one equation can be expressed interms of another. Hence linearly independent making further confirm towards singular. Similarly calculating determinant will be also 0 making singular matrix.
+- Gist, linearly dependent => rows expressed in terms of other => determinant = 0 => singular matrix.
+- Note, rows or columns if expressed in terms of other rows or columns respectively for checking linear dependency.
 - 
