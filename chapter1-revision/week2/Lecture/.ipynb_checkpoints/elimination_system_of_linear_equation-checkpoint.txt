@@ -1,0 +1,99 @@
+Solving non-singular in linear system equation:
+
+- To find unique solution if non-singular system if exist, we can multiply equation by constant on both sides and then subtract or add to make sure the original equation doesn't change.
+
+
+- a + b = 10, 2a + 2b = 20. If you solve both equation, using elimination, the solved system will be a + b = 10 and no unique solution. Its solved system can be represented as a = x , b = 10 - x, Here solution is not unique, as the value of x varies leading to different solution. There is one degree of freedom, as varying value of x we will get different solution. This is singular system with infinitely many solutions.
+
+- For the system of equation having more than 2 variables, try to make equation in such a way that it can be reduced into 2 variables.
+
+- Matrix row reduction - Gaussian elimination, same process of row removal.
+
+5a + b =  17
+4a - 3b = 6
+
+This can be converted to intermediate system 
+a + 0.2b = 3.4 => dividing by 5 
+b = 2 
+
+Solved system 
+
+a = 3
+b = 2
+
+System of equation in matrix form
+[5 1 
+4 -3] 
+Using matrix row reduction to intermediate system matrix form=> row echelon form 
+
+[1 0.2
+0 2] 
+
+Then the reduced echelon form can be obtained by
+
+[1 0
+0 1] 
+
+
+In row ecchelon form :
+The main diagonal will have ones then followed by zeroes. Also all ones or all 0's in the main diagonal form also might be there. The content below the main diagonal will be always 0. If there is 1 in main diagonal then anything in right of the 1 might be any numbers but right side of 0 must be all 0.
+
+
+Row operations preserves singularity.
+
+## RANK OF MATRIX
+Measure how much information does the matrix or system of linear equation carries.
+ranking machine learning is the application in image compression.
+
+For an image, every pixels intensity are stored in the number that carries large amount of space. is it possible to store blurred version of that image with significantly less space ? YES. The pixelated image are matrix and the rank of matrix = amount of space that is needed to store that corresponding image. The rank of such matrix containing image will be very high.
+
+By using Singular Vector Decomposition, we can reduce the rank of matrix while changing the matrix as little as possible. By reducing the rank we can make the original matrix similar to reduced rank matrix such that space it occupies will be less.
+
+
+Physical meaning of rank
+
+System 1: The dog is black, The cat is orange => 2 sentences, 2 piece of information => Rank = 2 
+System 2: The dog is black, The dog is black => 2 sentences, 1 piece of information => Rank = 1
+System 3: The dog, the dog => 2 sentences, 0 piece of information => Rank = 0
+
+Linear equation:
+
+System 1: a + b = 0 , a + 2b = 0, => 2 equation, 2 piece of information, Rank = 2
+System 2: a + b = 0, 2a + 2b = 0 => 2 equation, 1 piece of information, Rank = 1 
+System 3: 0a + 0b = 0, 0a + 0b = 0 => 2 equation, 0 piece of information, Rank = 0
+
+There exist relationship between rank of a matrix and dimension of solution space of matrix:
+
+System 1: a + b = 0 , a + 2b = 0, => 2 equation, 2 piece of information, Rank = 2, solution unique a=0,b=0, dimension of point = 0
+System 2: a + b = 0, 2a + 2b = 0 => 2 equation, 1 piece of information, Rank = 2, infinite solution, line form, a = 4,b=-4, a = 2, b = -2,the solution space will form a line for the given solved system of equation and the dimension of line = 1
+System 3: 0a + 0b = 0, 0a + 0b = 0 => 2 equation, 0 piece of information, Rank = 0, infinite solution, any point of a and b will be solution for given system whole space a = 2,b=3, dimension of space = 2,
+
+So rank = total no of rows - dimension of solution space.
+
+First system is non-singular, so matrix can be non-singular if and only if it has full rank. Similar to saying system of equation said to be non-singular when the number of equations is equal to the number of information.
+
+Rank = largest number of linearly independent rows.
+
+To calculate Rank, Row echelon form of matrix is extremely helpful.
+
+A = [5 1
+4 -3] 
+
+Divide each row by coefficients of first row
+A' = [5/5 1/5
+4/4 -3/4]
+
+A' = [1 0.2
+1 -0.75]
+
+Subtract first row from second row
+
+A'' = [1 0.2
+1-1 (-0.75-0.2)]
+
+A'' = [1 0.2 
+0 -0.95]
+
+
+
+
