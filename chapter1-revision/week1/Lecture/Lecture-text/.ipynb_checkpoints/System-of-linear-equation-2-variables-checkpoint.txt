@@ -70,4 +70,27 @@ So, the constants in the equation is not so important.
 - When the lines provide information that contradicts then these lines together in a plane will not have a solution and are singular. The rows of one equation can be expressed interms of another. Hence linearly independent making further confirm towards singular. Similarly calculating determinant will be also 0 making singular matrix.
 - Gist, linearly dependent => rows expressed in terms of other => determinant = 0 => singular matrix.
 - Note, rows or columns if expressed in terms of other rows or columns respectively for checking linear dependency.
-- 
+
+In the matrix, check the number of 1 in diagonal, if there are 2 1's in main diagonal then rank = 2
+if 1, 1's in main diagonal, then rank = 1. 
+if no 1's in main diagonal, then rank = 0.
+
+so FOR NONSINGULARITY, MATRIX MUST HAVE ONLY ONES(1) IN THE MAIN DIAGONAL.
+
+In large matrix, make sure rows with 0 are at the bottom if any.
+
+
+Reduced row echelon form is the form of solution of matrix.
+
+Pivot => any number that is in the row echelon form which follows the property i.e making sure 0's at the bottom and the the non-zero number in each row must be at the right of the above one. Number of pivots  = rank.
+
+[3 4 5 6 7
+0 0 2 4 8
+0 0 0 -4 0
+0 0 0 0 0] 
+
+here 3, 2, -4 is pivot. Rank of this matrix is 3
+During reduced row echelon form, first convert into row echelon form, and divide rows containing pivot by the pivot value such that pivot will become 1 & make sure above the pivot value, all the respective cols of pivot must be 0 to get reduced row echelon form. Turn anything above pivot to 0.
+
+
+
