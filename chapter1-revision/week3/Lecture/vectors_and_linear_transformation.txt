@@ -1,0 +1,89 @@
+Vector and their properties.
+
+Vectors are numbers only in column. Have magnitude and direction. The direction measured with tantheta.
+
+Norm: the way to measure of vectors' magnitude. can be considered as size or length of a vector.
+
+We know vector is numbers with one column i.e x belongs to R^n. The n rows and 1 column. Norm is function that maps this x belongs to R^n to single x belongs to R with 3 properties. 
+i. ||x|| >= 0 for all  x ∈ R^n also ||x|| = 0 iff x = 0
+ii. ||αx|| = α||x|| where α ∈ R, x ∈ R^n
+iii. ||x + y||<= ||x|| + ||y||, for all x,y ∈ R^n
+
+The above properties is for vector norm, for matrix norm we use matrix norm.
+
+Why vector norm ? 
+
+When dealing with non-linear function f(x) = 0, error is calculated by |e| = e_actual - e_predicted that gives the extent to which error has occured.
+This e_actual and e_predicted both are vectors. 
+
+For example consider e_1 ∈ R^100 , e_2 ∈ R^100, where e_1 has error distributed equally, [0.1
+0.1
+0.1
+....
+0.1] 100 rows * 1 columns. likewise e_2 has specific error. [100
+0 
+0
+0
+...
+0]. Here only one components of vector has values, else all will be 0. How do you assess and quantify the errors.
+
+Depending upon the task, we can use different norms, to evaluate the errors/vectors.
+
+Some norms include.
+1. L1 norm ||a - b ||
+2. L2 norm ||a - b ||
+3. Lmax norm max(a,b)
+4. Linfinite norm
+
+Sum and difference of vectors
+Distance between vectors.
+L1 norm
+L2 norm
+Cosine norm. To calculate similarity between vectors.
+
+Dot product:
+a = = [1 2 3], b= [1
+2
+3]
+a.b = 1.1 + 2.2 + 3.3 = 14
+
+The output of dot products are always scalar.
+
+Relationship between dot product and norm is that
+L2 norm of two vectors = square root of dot product of two vectors
+
+
+Geometric dot vectors:
+Angle between vectors.
+
+When we find the vectors dot product, we project the vectors into another vector, some projection will be positive and some will be negative.
+
+The angle of projection will be theta. If the angle between two vectors are 90 then dot product will be zero. 
+But consider vector u and vector v, having certain angle theta not equal to 90. now when you project the u vector on vector v, the u vector is represented as u'. Here, u' can be represented as ucostheta.v
+
+The dot product can be negative or postive. Negative if projected in opposite direction of one vector whereas positive if projected in same direction.
+
+The product of matrix and a vector is 3(if size of vector is 3*1) dot product stacked together. 
+
+
+LINEAR TRANSFORMATION
+
+During linear transformation, we are moving one point to another point in same plane with some structured process.
+We can use matrix as function that takes input vector and spits out output vector. Similarly we can get transformation matrix from given one point and the transformed point using that transformation matrix.
+
+Matrix multplication: combining 2 linear transformation into 1. Visualization is important.
+
+Matrix inverse.
+When matrix is transformed by another matrix called inverse, we get the identity matrix.
+Non singular matrix will always have its inverse.
+
+
+
+
+
+
+
+
+
+
+
