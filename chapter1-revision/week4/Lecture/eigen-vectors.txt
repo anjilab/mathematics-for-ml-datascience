@@ -1,0 +1,49 @@
+Singularity and rank of linear transformation:
+
+
+We know matrices are singular or non-singular by calculating determinant. If determinant  = 0, singular else non-singular. Singular matrix: Linearly dependent rows and columns. 
+
+Like matrices, linear transformation(equivalent to matrix) can be singular or non-singular. If one basis vector can be converted into another basis vector using linear transformation and holds the property that the new basis vector covering the whole plane is non-singular linear transformation.
+Consider a matrix [3 1
+1 2] This matrix as linear transformation, transforms basis vectors ( 0,0) (0,1), (1,0), (1,1) which forms square in plane(covers entire grid by square) is transferred to parallelogram  that also follows the property of covering entire grid. Hence non-singular transformation. Rank of that given transformation is given by dimension of transformed points i.e paralellogram = 2.
+
+Similary consider another matrix [1 1
+2 2], such matrix transforms the basis vectors into straight line. i.e (0,0) => (0,0), (0,1) => (1,2) , (1,0) => (1,2), (1,1) => (2,4)
+The basis vector which covered entire area of plane now gets transformed to just straight line. Such transformation => singular tranformation. 
+The rank of given matrix [1 1 
+2 2]  is given by dimension of transformed space i.e straight line = 1
+
+Additionally, if you use [0 0 
+0 0], then it transforms basis to single point. hence singular and rank = 0
+
+
+
+Rank => How many information does the equation contain, Rank = no of rows - dimension of solutions. 
+
+Determinant of matrix as an area:
+
+For a given matrix, [3 1
+1 2], when basis vector are transformed into parallelogram, the area of square = 1 and the area of transformed point is given by determinant. i.e 3.2 - 1.1 = 5
+
+Likewise, if you use, 1 1
+2 2] => when basis vector are transformed into square, the transformed will be line whose area = 0. The determinant = 0, 
+
+
+Determinant of product:
+det(AB) = det(A). det(B)
+
+Determinant of inverses:
+
+det(A_inverse) = 1 / (det(A))
+
+Proof:
+det(AB) = det(A). det(B)
+Let B = A_inverse
+det(A.A_inverse) = det(A). det(A_inverse)
+det(I) = det(A). det(A_inverse)
+1 = det(A). det(A_inverse)
+det(A_inverse) = 1 / det(A)
+
+
+
+
