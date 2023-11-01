@@ -45,5 +45,33 @@ det(I) = det(A). det(A_inverse)
 det(A_inverse) = 1 / det(A)
 
 
+# BASIS VECTOR OF thE PLANE:
+
+Every point in the plane can be expressed in terms of linear combination is basis vector 
+
+But what is not basis. Any two vectors that are in the same direction or opposite direction but overlapped to each other, only line of that vectors can be formed and whole point in the plane cannot be represented in terms of those vectors. That is 2 vectors in the same line then such vector can not be basis vector. 
+
+# SPAN 
+Some can be basis vector in one plane but cannot be of another plane
+Span set of vectors is set of points that can be reached by walking in the direction of these vectors in any combination. For to be basis vector, it needs to be able to find any point in the plane. For example i and j vector spans over the plane. i.e any point in that plane can be reached by tracing the direction of those 2 vectors. But a = (1,1) & b = (2,2), These two vectors can't be used to trace point like (6,2). It is able to  trace (3,3) i.e any point in the line formed by two vectors. hence its span of set of two vectors is all points in the straight line.
+
+# EIGEN BASES
+
+Important in principal component analysis.
+Square to parallelogram we have seen where (0,1) and (1,0) as bases but if you took (1,0) and (1,1) then its paralellogram and using [2 1 
+0 3] we will transform them into another parallelogram having basis as (2,0) and (3,3). And comparing what we see is that, first parallelogram with basis vector(1,0) & (1,1) are parallel to (2,0) and (3,3) each sides respectively i.e (1,0) is stretched by 2 factor making (2,0) and (1,1) is stretched by 3 factor making (3,3). These both basis vector before and after transformation, their sides are parallel to each other.
+Eigen values are the stretching factor and two vectors are eigen vectors.
+
+
+Finding eigen values and eigen vectors:
+Two lines intersects at a point. Putting those point in each line will satisfy the equation. While values obtained from both equation after substituting that point when subtracted with each other will lead to 0. Similarly, transformation matrix when used with a point and other transformation matrix with same point if coincide in infine many soluition then their difference = 0 at infinitely many points rather than just one singular point. Example: [ 2 1 
+0 3] and [3 0
+0 3] these two transformation will be exactly same in the infinitely many solutions and this solution are the points in the line. Hence, by finding the determinant after finding [ 2 1
+0 3] * [x 
+y] = [lambda 0 
+0 lambda] [x
+y] So, they coincide with infinitely many solutions. determinant = 0. Characterstics polynomical solving both transformation. multiply transgormation with x & y and equating with eigen values * x & y we get eigen vectors.
+
+
 
 
