@@ -1,0 +1,53 @@
+Model training: taking all the inputs and finding model function in such a way it predicts the best possible output. Some model might be straight line, such that it passes closely/through all the points in the data.
+
+When there are two points, you can find slope between two points by rise over fall. Similarly, to find derivative of a function at a point is slope of tangent line at that point which is dx over dt. Taking example as velocity, when there is no rate of change in function means within that interval no distance have been covered, i.e car didn't move within given interval. The point where car didn't move, slope will be 0. i.e the derivative of function at that point will be horizontal line where slope will be 0 making derivative is 0. To find farthest distance or smallest distance it has travel, you can find derivative of function and set that value to 0, which will give the smallest distance or farthest distance for given car.
+
+slope = Δx / Δt, while calculating Δx, the two points are used, we reduce the distance to these two pts in such a way that they are reduced to single point represented as slope of tangent line at that point given by derivative 
+Now derivative is y = f(x) , dy/dx. f'(x) is lagrange's notatation df(x)/dx leibniz's notation. 
+
+Derivation of constant.
+When x-intercept of line is 0 that is it has only y-intercept(0,y). Making horizontal line i.e parallel to x-axis, so slope = 0. therefore derivative =0.
+
+Derivation of line: 
+Slope of line  = derivative of line.
+
+Derivation of quadratic functions:
+y = f(x) = x^2 = 2*x = That is same if you calculate slope at a point. 
+
+
+Derivation of cubic functions
+y = f(x) = x^3 = 3x^2
+
+
+Inverse function and derivative.
+Inverse of a function is a function that undo what function does 
+x = f(x), there exists g that will bring x from f(x) i.e g(f(x)) = x
+
+Let, f(x) = y = x^2, slope = Δf/Δx, Similarly, g(x) is inverse of f(x), g(x) = g(f(x)). Slope = Δg/Δy. If we plot the graph, Δf = Δy, Δg = Δx.Reflection happens so,
+derivative of g(x) = g'(x) =Δg/Δy = Δx/Δf = 1 /Δf/Δx=  1/f'(x) 
+
+Derivative of trigonometric function:
+
+
+y = f(x) = sinx 
+f'(x) = dy/dx = dsinx/dx = cosx
+
+Differentiable function:
+There are function whose derivative can be found. If we can draw unique tangent at that point.
+Any function having corners or cusp (pointed end) then, the given function is said to non-differentiable.
+any function which are discontinuous, the given function is said to non-differentaible
+any function which have vertical tangent, such function is said to non0-differentiable.
+
+Product rule with scalar. 
+f(x) * scalar then its derivative is also scale by scalar.
+
+Sum rule with scalar.
+f(x)  = g(x) + h(x)
+The derivative of f(x) i.e f'(x)= g'(x) + h'(x)
+
+
+Product rule:
+f(xy)/dt = y*dx/dt + x * dy/dt
+
+Look at chain rule.
+
