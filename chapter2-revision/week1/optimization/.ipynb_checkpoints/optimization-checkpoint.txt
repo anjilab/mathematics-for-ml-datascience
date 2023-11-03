@@ -1,0 +1,42 @@
+Derivatives useful for calculating rates.
+Other than that in ml, useful for optimization.
+Optimization = finding min and max value of a function.
+In ml, we find a model that will fit our data set. Error function tells us how far we from real value, so we try to minimize this value.
+
+We plot the values and try to find the slope. The point where slope is zero will be the least value of error. Sometimes it's not certain that there will be only one minima. there might be more than one minima called local minima. Our goal is to find among all the local minima the smallest one as global minima. At maximum and minimum point, slope of tangents at that point will always be 0 but sometimes there might be more than one point where max and min be 0 such are called local minima(candidates for minimum) or maxima.
+
+When optmizing a function, whether maximizing or minimizing it, function is differentiable at every point.
+
+Optimization of square loss: average of distances. 
+Optimization of log loss:
+Take a coin toss example, you saw events of 7 heads and 3 tails, Then the probability distribution for getting heads is given by
+prob of heads = p and tails = 1-p
+g(p) = p^7(1-p)^3
+Our goal is to maximize g(p), to maximize we find derivative of g(p) w.r.t p, we get
+dg(p)/dp = (1-p)^3dp^7/dp + p^7*d(1-p)^3/dp
+= 7p^6*(1-p)^3 + p^7*3*(1-p)^2*(-1)
+Set derivative to 0, we get:
+dg(p)/dp = 0
+p^6(1-p)^2(7-10p)= 0 
+so either p= 0 or p =1 or p = 0.7
+If p = 0, there is no chance of heads but need 7 heads, rejected this value, likewise if p = 1, there is no chance of tails as we need 3 tails so rejecting, therefore, best possible value is 0.7.
+
+This process is long, hence we introduce log. 
+
+Log of g(P). if g(p) is maximum, log(g(p)) is also maximum, so maximizing of log(g(p), maximizing g(p). 
+log(g(p))= log(p^7*(1-p)^3)
+= log(p^7) + log(1-p)^3
+= 7logp + 3 log(1-p)
+Take derivative of log(g(p)) w.r.t to p:
+dlog(g(p))/d(p) = 7/p - 3/(1-p) 
+now set to 0:
+we get p = 0.7
+
+negative of log is log loss. this is what we need. Why we need -ve g of p is because p = probability between 0 and 1, and logarithm between 0 and 1 is negative number so we want negative g of p to be positive number so instead of maximize we minimize -ve log of g of p.
+
+
+Our data was 7H and 3T, our model was a coin with p probabolity of heads and 1-p probability of tails. We found optmized value of p by minimized log loss.
+
+Why log loss:
+1. Derivatives of products is difficult when there are larger numbers it becomes difficult but for sum it is easy. log will convert products in function to sum making calculation easy. log(ab) = loga + logb
+2. If there was product for eg: in function p^7(1-p)^3, after derivative we get 7p^6*(1-p)^3 + p^7*3*(1-p)^2*(-1), each part is in the form of product, since it is the product of probabilities which are the number between 0 and 1, while multiplying small numbers we tend to get more small numbers, hence log simplifies such products to sum.
