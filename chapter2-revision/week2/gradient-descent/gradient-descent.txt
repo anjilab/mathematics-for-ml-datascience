@@ -1,0 +1,12 @@
+When you will use derivatives and find minimum value by setting to 0, it can be easier for the case in small dimension but as the dimension increases, it becomes more complex. For example: in case f(x) = e^x + logx.its derivative is e^x + 1/x. Setting this derivative to 0, we will get the value nearly equal to minimum. but its hard to get the value, as it turns out to be omega constant which is very famous number. So, what we can do is use another way where, we move to the left or right little by little. we move in both directions and check which one is smaller, the direction where there is smaller value, we move towards that direction. We might not find exact value of minimum but nearly equal to minimum.
+
+for a parabola facing upward, if we assume point to the left, then its slope is negative(move towards right to get minimum) whereas any point on the parabola to right side.  will have positive(move towards left to get minimum). If the slope is positive, to move towards right, you need to subtract little bit to the coordinate of the point.  now what we do is new_point = old_point - slope.
+
+When you are the steeeper part of the curve, derivative might be larger making jump very huge which might lead to overshoot problem. Therefore, we need to move in very small steps making us to modify formualt to new_point = old_point - 0.001 * slope.
+This is what gradient descent.
+
+This 0.001 is learning rate, determing steps. Too large, overshooting problem, too small, slow steps, takes time. so it's necessary to find the accurate learning rate.
+
+Drawbacks of gradient descent is it might get stuck to local minima. To avoid it, we tend to run GD multiple times with different starting point such that from every point same minima can be obtained.
+
+In case of two variables, how to choose which direction to move. we will have gradient in case of two variables. taking small step and getting to maximum point, we need to go to the direction of gradient but we are in search of finding minimum value hence we take -ve of the direction of gradient.
