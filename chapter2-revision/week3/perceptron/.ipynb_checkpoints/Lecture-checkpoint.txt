@@ -1,0 +1,36 @@
+Single layer neural network
+
+𝑦̂  = w1.x1 + w2.x2 + b [this is prediction function.]
+This y is function of w1,w2 and b. Our goal is find the values of weights and bias such that target and the predicted are nearly equal to each other i.e reducing the errors in the prediction. Since x will be the input we can't change them though we can modify by scaling or reducing but not change the value, but we can change values of weights and bias, that is what optimization deals with. 
+
+In case of linear regression where we will be predicting price of houses given the features of house like its size, area and so on, our model is straight line that will pass nearly through the real/exact output such that error will be small. but it won't be the case, we wont find exact linear relationship between data ,hence we have to find the st line that can predict well.
+
+To get better line, we first have find the how far the actual and predicted value of line is called error. if the predicted value is below the line,(y > 𝑦̂ ) y-𝑦̂  will be positive but if predicted value is above the line, then y-y_predicted will be negative i.e. y < 𝑦̂ . When we have datas like -3+3+2-2 = 0 (such result seems like no error, though we know it has error) , -3+3+1-2 = -1 , -3^2 + 3^2 + 1^2 + 2^2 = 23. Therefore to avoid confusion, we square the difference leading to squared error(y-𝑦̂ )^2. We also use 1/2*(y-𝑦̂ )^2, The reason 1/2 is used because if we did derivation of (y-𝑦̂ )^2, we are going to get 2 at the front which will ultimately cancel making calculation easier.
+
+So loss function L(y,𝑦̂ )  = 1/2*(y-𝑦̂)^2.
+
+Main goal find w1,w2 and b with the least error.
+
+We can use gradien descent algorithm, to determine best weights and bias.
+Find ∂L/∂w1, ∂L/∂w2, ∂L/∂b where
+w1 = w1 - learning_rate*∂L/∂w1
+w2 = w2 - learning_rate*∂L/∂w2
+b = b - learning_rate*∂L/∂b
+
+Now same perceptron used in regression can be modified into classification problem by using activation function. The reason why use activation function is to introduce non-linearity.
+
+For classification specially in binary, we need 1 or 0 but the output of prediction function gives continuous value. To convert the continuous value, we need to use activation function called sigmoid, it will shrink input between 0 and 1. Larger number to sigmoid (e^-z) then it outputs number close to 1, whereas smaller number i.e -ve number, then it outputs number close to 0. 
+
+Another interesting thing about sigmoid is that its derivative. using d(σ(z)))/dz = σ(z)(1-σ(z)). The derivative is easy to use.
+In case of classification, the loss that works well is log loss.
+
+For log loss 
+
+L(y,𝑦̂) = -y ln𝑦̂ - (1-y)ln(1-𝑦̂)
+
+
+If y is zero then L(y,𝑦̂) is small when 𝑦̂ is small and large when 𝑦̂ is large. If y is one then the opposite happens. When 𝑦̂ is close to one this function is small and when 𝑦̂ is close to zero this function is large. In other words this L of y, 𝑦̂ is a large number if y and 𝑦̂ are far away from each other and small number if they are close to each other. 
+
+
+∂L/∂w1 = how much w1 affects L in what direction
+
