@@ -38,3 +38,57 @@ When second derivative is 0, no conclusion regarding maximum or minimum. if seco
 
 In case of first derivative if f'(0) > 0 = increasing & f'(0) < 0 = decreasing.
 In case of second derivative if f''(0) > 0 = concave up (the point at concave up is local minima)  & f''(0) < 0 = concave down (the point at concave down is local maxima)
+
+
+
+Hessian:
+The second derivative is actually a matrix full of second derivatives called hessian.
+In case of 1 variable x, the function f(x) has first derivative as f'(x) and second derivative as f''(x) 
+In case of 2 variable x,y the function f(x,y) has first derivative as fx(x,y) w.r.t x and fy(x,y) w.r.t y so ∇f = [fx(x,y)
+fy(x,y)]
+
+For 2 variables second derivative is given by:
+f(x,y) = 2x^2 + 3y^2 - xy 
+1st partial derivative w.r.t x = 4x - y, again find rate of change(change of change) of f(x,y)  w.r.t x = 4,rate of change(change of change) of f(x,y)  w.r.t y = -1 (fxy(x,y))
+1st partial derivative w.r.t y = 6y - x, again find rate of change(change of change) of f(x,y)  w.r.t y = 6,rate of change(change of change) of f(x,y)  w.r.t x = - 1 (fyx(x,y))
+
+∂f(x,y)/∂x = 4x - y, fxx(x,y) = ∂^2f/∂x^2 = 4, ∂^2f/∂x∂y = -1 = fxy(x,y)
+∂f(x,y)/∂y = 6y -x, fyy(x,y) = ∂^2f/∂y^2 = 6, ∂^2f/∂y∂x = -1 = fyx(x,y)
+
+So hessian matrix = [fxx fxy
+fyx fyy]
+
+We know that in case of 1 variables when second derivative is greater than 0, concave up i.e minimum value at the bottom but if we have multiple variables how to say that it is concave up ? For that we will find hesian matrix (2nd derivatives) then find their eigen values if the eigen values are all positive then concave up.
+
+For concave down. f"(x) < 0 , maximum value at the top where slope will be 0. For more than one variables, find hessian matrix and their eigen values if all of the eigen values are negative then concave down.
+
+
+Sadle point, shaped like horse. which is neither max nor min. Here for such function, find hessian matrix, their corresponding eigen values and for sadle point one of them will be positive another will be negative.
+
+So, for 1 variable = local minima = f"(x) > 0, 
+for 2 variables = local minima = eigen values λ1 and λ2 > 0 (positive), concave up
+for any n variables = local minima = all eigen values must be > 0.
+
+For local maxima:
+1 variable = local maxima = f"(x) < 0, 
+2 variables = local maxima = eigen values λ1 and λ2 < 0 (negative), concave down
+any n variables = local maxima = all eigen values must be < 0.
+
+For undeterministic case: where more information is needed,
+1 variable = local maxima = f"(x) = 0 , 
+2 variables = local maxima = sign of eigen values λ1 and λ2 different (sadle point),some = 0 
+any n variables = local maxima = all eigen values have different sign.
+
+
+ 
+
+For 1 variable:
+x1 = x0 - [f'(x0) / f''(x0)]
+x1 = x0 - [f'(x0) * f''(x0)^-1]
+
+For 2 variables
+[x1 y1]^T = [x0 y0]^T - H^-1(x0,y0) * ∇f(x0,y0) [make sure the order of matrix in the form they can be multiplied.]
+
+
+
+
