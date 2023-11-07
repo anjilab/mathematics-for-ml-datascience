@@ -1,0 +1,40 @@
+Newton's method
+Initially newton's method was used for finding roots of equation. For example: x^2 + x - 2 = 0, (x+2)(x-1) = 0, x = -2 and x=1 is the required roots. But if there was complex equation how would we find the roots of the equation. We would be using newton's method.
+Here, what we do is take any point on function be x0, draw the tangent at that point in the function. It's y-axis value = f(x0) and x-axis value is x0. this tangent line when drawn it meets to another x-axis point called x1. this x1 is closer to the point where we will be getting our equation to 0. so Slope = rise/ fall
+
+f'(x0) = f(x0) / x0- x1
+x0-x1 = f(x0) / f'(x0)
+x1 = x0 - [f(x0) / f'(x0)]
+
+In this way new point(x1) is determined. This process is done repeatedly. until the terminating values are unchanged. whenever the last values after decimals are same we conclude that is the root of the equation.
+
+Taylor's series: https://betterexplained.com/articles/taylor-series/
+
+Newton's method for optmization: https://ardianumam.wordpress.com/2017/09/27/newtons-method-optimization-derivation-and-how-it-works/
+x1 = x0 - [f'(x0) / f''(x0)]
+
+When we take a cell, dive into nucleus and extract the dna, now we can grow entire organism from that single sample, Likewise if you take any point in the function and dive in the function, you can pull out enough data from a single point to rebuild the entire function. 
+
+Very fast and powerful, alternate of gradient descent algorithm. 
+it is used to find zeros of function. i.e f(x) = 0. 
+In newtons method what we do is we find new point towards the function such that it will get nearer to zero by using formula:
+slope = rise/fall, where rise = f(x0) and fall = x0 - x1. Then we know slope is derivate of that function at given point point (x0) = f'(x0)
+
+f'(x0) = f(x0) / x0- x1
+x0-x1 = f(x0) / f'(x0)
+x1 = x0 - [f(x0) / f'(x0)]
+
+Newtons method find the zeros of the function not the minimum where as gradient descent.
+
+g(x) = e^x -log(x)
+g'(x) = e^x - (1/x)
+g''(x) = e^x - (1/x)^2
+
+We use netwon's method for optimization. i.e second derivative.
+
+We know that the derivative will be 0 if its straight line. Now when second derivative is 0 it means first derivative is equal to 0.
+Second derivative tells about curvature. Curvature means what the curve is about. When curve is facing upwards, concave up or convex, f''(0) > 0 But when curve is facing downwards, concave down or f''(0) < 0. Second derivative tells something is maximum or minimum.
+When second derivative is 0, no conclusion regarding maximum or minimum. if second derivative is > 0, local minimum and second derivative is < 0, local maximum.
+
+In case of first derivative if f'(0) > 0 = increasing & f'(0) < 0 = decreasing.
+In case of second derivative if f''(0) > 0 = concave up (the point at concave up is local minima)  & f''(0) < 0 = concave down (the point at concave down is local maxima)
