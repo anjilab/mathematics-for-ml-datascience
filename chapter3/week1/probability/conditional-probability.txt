@@ -1,0 +1,7 @@
+Conditional probability: Calculating the probabolity of an event happening given that another event has already happened. P(A|B)
+
+
+For independent events:
+P(A ∩ B) = P(A)*P(B)
+But if they are dependent:
+P(A ∩ B) = P(B|A)*P(A), in case of independence P(B|A) = P(B) as the probaility of B occuring is independent to event A.its probability doesn't change.
