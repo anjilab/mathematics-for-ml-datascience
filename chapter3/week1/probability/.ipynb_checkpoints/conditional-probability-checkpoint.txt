@@ -1,0 +1,1 @@
+Conditional probability: Calculating the probabolity of an event happening given that another event has already happened. P(A|B)
