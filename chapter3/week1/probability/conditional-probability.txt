@@ -5,3 +5,54 @@ For independent events:
 P(A ∩ B) = P(A)*P(B)
 But if they are dependent:
 P(A ∩ B) = P(B|A)*P(A), in case of independence P(B|A) = P(B) as the probaility of B occuring is independent to event A.its probability doesn't change.
+
+Bayes theorem:
+
+Example: disease testing.
+million (1,00,000) and disease affect 1 per 10,000, test 99% effective i.e 99% will get correctly diagonsed. 1% will get misdiagonse. when you went to doctor you tested sick ? what is prob you are sick given you are tested positive ? 
+
+Among 1,00,000 only 1 per 10,000 are sick so 999,900 are healthy and 100 are sick. P(sick) = 0.01, P(not sick) = 99.99%, P(diagnosed_sick | sick)= 99%, P(diagnosed sick| not sick) =  1%
+healthy people who were diagnosed sick among healthy = 1% of 999900 = 9999, 
+who were correctly diagosed(not sick) i.e healthy people and diagnosed healthy = 99% of 999900 = 989901
+who were correctly diagnosed sick and are sick P(Sick) = 99% of 100 = 99
+who were misdiagnosed as healthy but are sick = 1% of 100 = 1
+
+findding P(Sick|you tested sick) = who are diagnosed sick but healthy / who are diagnosed sick and is sick + diagnosed sick and is healthy =  99 / (99 + 9999) = sick & diagnosed sick / everyone diagnosed sick
+
+Total population (1,00,000)
+sick = 100 = (diagnosed sick | sick = 99% , sick & diagnosed sick = 99), (diagnosed healthy | sick = 1%, sick & diagnosed healthy = 1)
+healthy = 999900 = (diagnosed sick | healthy = 1%, healthy & diagnosed = 9999), (diagnosed healthy| healthy = 99%, healthy & diagnosed healthy = 989901)
+A=sick 
+B=diagnosed sick
+P(sick | diagnosed sick) = P(A|B) = ?,
+we know conditional probability = P(A ∩ B) = P(B|A)*P(A) = P(B∩A) = P(A|B).P(A).
+P(A ∩ B) = P(B∩A) 
+P(A|B) = P(A ∩ B) / P(B) = P(B ∩ A) / P(B) ? (Find)
+P(A ∩ B) = P(sick ∩ diagnosed sick) = P(sick| diagnosed sick).P(diagnosed sick) 
+P(B ∩ A) = P(diagnosed sick ∩ sick  ) = P(diagnosed sick|sick).P(sick)
+
+P(B) = Probability of diagnosed sick (all population who were diagnosed sick)= P(sick ∩  diagnosed sick) + P(not sick ∩ diagnosed sick) =  P(diagnosed sick | sick).P(sick) +  P(diagnosed sick | not sick).P(not sick) 
+so, 
+P(A|B) = P(A ∩ B) / P(B) = P(sick | diagnosed sick).P(diagnosed sick) / [(P(diagnosed sick | sick).P(sick) +  P(diagnosed sick | not sick).P(not sick))]
+
+Prior = probability not depending upon any
+when event occur
+Posterior= prob occuring given event occur
+
+Naive bayes:
+event = email contains lottery & winning
+
+P(spam | lottery), P(spam | winning)
+posterior = P(spam | lottery & winning)
+but if not just lottery and winning we used other 50 words or 100, it's going to be large, sometimes some word might be zero. not so good. 
+
+so, we make naive assumption that is words are independent. that is lottery and winning are independent, but in real life it is not the case. it is done to make our calculation easier. 
+
+
+
+
+
+
+
+
+
