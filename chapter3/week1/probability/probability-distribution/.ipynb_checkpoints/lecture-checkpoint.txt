@@ -1,0 +1,68 @@
+Random variables:
+
+The variables that can take many values.
+When a coin is flipped, either you are getting heads or tails. P(H) = 0.5 and P(T) = 0.5
+Then, if X = random variable that representes number of heads, then when X can take two values that is either 0 or 1 if Heads then X=1 if Tails then X=0
+
+Two types of RV:
+discrete: numbers of heads when coin is flipped, 5's when dice is rolled. takes countable number of values
+continuous: infinite number of values. RV X can take infinte number of values. take values on interval.
+
+Difference between deterministic and random variable.
+
+In case of deterministic, the value of variable remains same x=2, f(x) = x^2 here other than x=2 no value x can represent. Certain outcomes i.e if x = 2, f(x) = 4 always 4
+In case of random variable, the value of RV can be any, for example: when a coin is tossed 10 times, & X = no of heads, then the value X can take are: {0,1,2,3,4,5,6,7,8,9,10} X=0 means, no heads were obtained, 10 tails were tossed when coin was tossed 10 times. Uncertain outcomes. Here when X=1, the probability changes, similarly when X=9, probability is changed. though X represents number of heads, its probability gets changed.
+
+For each outcomes we know what their probability is, when we map this outcomes in x-axis and plot a graph with their probabilities then probability distribution is obtained.
+
+When 3 coins are flipped,X = number of heads in 3 coins toss. 
+Then X=0,{TTT}, P(X=0) = number of outcomes when X=0/total no of possible outcomes = 1/8
+X=1, {HTT,THT,TTH}, P(X=1) = number of outcomes when X=1 / total no of possible outcomes  = 3/8
+X=2, {HHT,THH,HTH}, P(X=2) = number of outcomes when X=2 / total no of possible outcomes  = 3/8
+X=3, {HHH}, P(X=3) = number of outcomes when X=3 / total no of possible outcomes  = 1/8
+
+probability mass function: 
+for discrete random variable.
+probability that random variable takes the value & the sum of proabilities is 1.P(X=x)
+
+
+BINOMIAL DISTRIBUTION:
+The discrete probability distribution where there are n independent trials, in each trial there are only two possible outcomes, each outcome is either success or failure and the probabilites of success and failure in each trial remains same.
+
+General probability mass function for X : number of heads in 5 coin tosses.
+Coin has probability P(H) = p
+Event: X = x: x heads in 5 tosses i.e 0,1,2,3,4,5
+
+for one outcomes , p^x*(1-p)^(5-x)
+for all possible order : 5Cx p^x*(1-p)^(5-x)
+For n toss: nCx p^x*(1-p)^(n-x)
+
+X~Binomial(n,p), where n & p are the parameters of binomial distribution.
+
+For bernouli distribution, one of 2 outcomes only, either success or failure
+X~Bernouli(p), where p is the parameter of bernouli distribution. Here p = probability 
+
+CONTINUOUS DISTRIBUTION:
+interval cannot be listed (for example: no of heads in coins can be listed but waiting time in bus can be 2 ,2.01,2.02 infinitely number of values.
+We cannot represent here X=2, the exact value it can take place,cause there are many possible values. 
+p(x between 0 and 1 min), P(x between 1 and 2 min), P(x between 2 and 3 min) When we plot this it will give histogram but if we plotted for infinite we will get continuous curve called continuous distribution. sum under the curve will be equal to 1.
+So, what we can do is P(X<2)
+
+Probability density function:
+Only for continuous random variable. pdf = area under the curve between intervals. as area of line is 0 so probability of eaxctly is certain value in continuous is 0.
+
+
+Cumulative distribution function
+sum , rather than finding probabilities between 0 and 1 or 1 and 2, what you do is 0 and 1 and 0 and 2 = (0 and 1 + 1 and 2)
+how much the probability is being accumulated till the certain value.
+
+
+
+
+
+
+
+
+
+
+
