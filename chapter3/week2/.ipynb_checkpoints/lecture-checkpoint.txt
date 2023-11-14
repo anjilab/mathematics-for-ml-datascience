@@ -1,0 +1,52 @@
+Mean: Central tendency
+
+In continuous distribution, mean is the point that balances the curve.
+Due to outliers, mean might not be accurate measure. For example in data set: 1,2,3,2,3,2,1,2,4,5,10,1000: Due to this large number called 1000, the average will 86.25. thought most of the data are less than 50, the average is 86.25 due to 1000 in the data. 1000 brings the avergae up for all the data point. Therefore, average is not measuring the actual average instead it got skewed by 1000. 
+
+To remove that, we divided that data in terms of position, i.e median and pick the median. Average when provides deceiving opinion use median.
+Mode is also another central tendency which measures which item ocur more frequently. that item with highest frequency is mode of the data. outcome with highest value of probability is mode.
+
+In case of normal distribution, mean, median & mode all are same.
+
+Mean is not the middle value. it's the point that balances the data.
+
+E[x] = x1.P(x1) + x2.P(x2) + x3.P(x3) + x4.P(x4)
+E[f(x)] = f(x1).P(x1) + f(x2).P(x2) + f(x3).P(x3) + f(x4).P(x4)
+
+For example: for rolling a dice: all possible values are{1,2,3,4,5,6}, their respective probabilities are {1/6,1/6,1/6,1/6,1/6,1/6}
+Then the expected value = E[X] = 1*1/6 + 2*1/6 + 3*1/6 + 4*1/6 + 5*1/6 + 6*1/6= 3.5 On average rolling 2.5 balances out the distribution. 
+Similary F(x) = {1,4,9,16,25,36} , E[X^2] = E[F(x)] = 1*1/6 + 4*1/6 + 9*1/6 + 16*1/6 + 25*1/6 * 36*1/6 = 16.5
+
+Sum of expectations:
+
+Coin flip, heads = 1$
+so E[coin_heads] = p(x)*x = 1*0.5 + 0*0.5 = 0.5$
+Roll a dice = E[dice_roll] =  1*1/6 + 2*1/6 + 3*1/6 + 4*1/6 + 5*1/6 + 6*1/6= 3.5$
+
+sum of n variables = sum of their expected values.
+
+Though expected value can help us to know about certain distribution, it doesn't give complete information for example: two distribution might have same mean but how big the width or narrower the area of the curve is can't be obtain from the distribution.
+
+VARIANCE = MEASURING SPREAD
+
+When coin toss, you win 1$ for heads, lose 1$ for tails. on average, E[X1] = 0 its 0$ as you win and lose 1$. Similary if you toss coin again, you will win 100$ for heads and lose 100$ for tails. The average here also is 0$, E[X2] = 0. So how do you distinguish between this ?  here in game 1 has small spread but game 2 has big spread. 
+
+E[X1] =( 1 + (-1) )/2 = 0 
+E[X2] =( 100 + (- 100) )/2 = 0 
+
+E[X1^2] = (1^2 + (-1)^2) /2 = 1
+E[X2^2] = (100^2 + (- 100^2) )/2 = 10,000
+
+so which is risky ? From square we can see Game 2 is more riskier, variance is almost square but check out 
+
+Game 1: you win 1$ for heads, and lose 1$ for tails, E[X1] = 0, E[X1^2] = 1
+Game 2: you win 6$ for heads, and win 4$ for tails, E[X2] = 5,E[X2^2] =  26 
+Spread is same for both game 1, so how to determine risk, so rather than squaring x, for spread we (X-mean)^2 for variance
+
+Variance = E[(X-μ)^2] = E[X^2 - 2Xμ + μ^2] = E[X^2] - 2μE[X] + E[μ^2] = E[X^2] - 2E[X]E[X] + E[X]^2 = E[X^2] - 2E[X]^2 + E[X]^2  = E[X^2] - E[X]^2 
+Variance = E[(X-μ)^2] = E[X^2] - E[X]^2 
+
+
+
+
+
