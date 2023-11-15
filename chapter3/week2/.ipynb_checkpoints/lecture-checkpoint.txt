@@ -47,6 +47,32 @@ Variance = E[(X-μ)^2] = E[X^2 - 2Xμ + μ^2] = E[X^2] - 2μE[X] + E[μ^2] = E[X
 Variance = E[(X-μ)^2] = E[X^2] - E[X]^2 
 
 
+Variance is square so if x is measured in metre, then variance is in metre square, so while comparing metre and metre square, they are of two different units. Hence for the comparison, we use standard deviation, square root of variance.
+in normal distribution 68, 95, 99.7 which means 68% will lies between one std deviation and 95% of data lies within 2 std deviation.
+
+Sum of gaussians:
+If there are linear combination of variables x and y which are both gaussian  & independent then sum of gaussian will be gaussian where mean of new gaussian will be mean of two given gaussian and variance as the sum of another two gaussian.
+
+STANDARDIZING A DISTRIBUTION:
+
+keeping mean = 0, subtract mean and get new distribution with mean =0.
+When variable, x, we will have x- μ, since linear combination so expected value is X-μ = 0
+E[X- μ] = E[X] - E[μ] EXPECTED VALUE OF CONSTANT IS CONSTANT SO E[μ]
+
+E[X- μ] = E[X] - μ = 0
+
+Everything nice when standard deviation is 1.
+
+if mean =0 , sigma, ORIGINAL IS sigma, now we convert, sigma into 1 by X divided by sigma
+X/sigma =1 
+
+Centring distribution means, when original distribution has mean = μ and sigma = σ, then we can centre by X-μ making new distribution μ = 0 and sigma = σ Then we scale distribution by   X-μ / σ then new distribution becomes, mean = 0 and sigma = 1. This whole process is called standardization of distribution.
+
+
+
+
+
+
 
 
 
