@@ -69,6 +69,83 @@ X/sigma =1
 Centring distribution means, when original distribution has mean = μ and sigma = σ, then we can centre by X-μ making new distribution μ = 0 and sigma = σ Then we scale distribution by   X-μ / σ then new distribution becomes, mean = 0 and sigma = 1. This whole process is called standardization of distribution.
 
 
+To measure the distribution skewness & kurtosis are other measure after mean, variance.
+SKEWNESS AND KURTOSIS: Moment of distribution
+E[X] = ∑ over all x, multiply the product and the probability. 
+= x1p(x1) + x2*p(x2) + x3*p(x3) + x4*p(x4) first moment
+E[X^2] = x1^2p(x1) + x2^2*p(x2) + x3^2*p(x3) + x4^2*p(x4)  second moment
+E[X^3] = x1^3p(x1) + x2^3*p(x2) + x3^3*p(x3) + x4^3*p(x4)  third moment
+E[X^k] = x1^kp(x1) + x2^k*p(x2) + x3^k*p(x3) + x4^k*p(x4)  kth moment
+
+SKEWNESS:
+
+Lottery = price:1$ , winner: 100$, You have 1% winning probability with 99$, You have 99% losing probability with 1$
+car insurance = cost: 1$, car reparation = 100$, Client has 1% chance to cost reparation (car crash and pay money)99$, Client has 99% chance of not crash with 1$. Client crashes is  1%. You will be getting 1$ and they don't crash a car. You will be losing 99$ when they crash a car.
+
+E[X1] fOR LOTTERY = -0.99*1 + 99*0.01 = 0 first moment
+E[X1] FOR crash = 1*0.99 - 99*0.01 = 0first moment
+
+Thought two different case scenarios, by expected value, we found these as same. Spread is also same so spread also didn't provide any new information. 
+
+Var[X1] = E[X1^2] - E[X1]^2 
+Var[X2] = E[X2^2] - E[X2]^2
+Since, E[X1]^2  = E[X2]^2 = 0 so Var[X1] = E[X1^2] =99 second moment, Var[X2] = E[X2^2] = 99 second moment
+Here first & second moment are same. how to tell these apart, now find third moment.
+E[X1^3] = x11^3p(X12) + x12^3*p(X12) = -1^3 * 0.99  + 99*0.01^3 = 9702 third moment, some values that are positive towards right, skewed right, positively skewed.
+E[X2^3] = x21^3p(X21) + x22^3*p(X22) = 1^3 * 0.99  - 99*0.01^3 =  -9702 third moment, some values that are far towards left, skewed left, negatively skewed
+
+Skewness =  E[(X-μ)^3 / σ^3] 
+3 CASES
+1. positively skewed, right direction, E[(X-μ)^3 / σ^3]  >0
+2. negatively skewed, left direction, E[(X-μ)^3 / σ^3] < 0
+3. not skewed, symmeteric, E[(X-μ)^3 / σ^3] = 0
+
+So, when mean & variance i.e first and second moment don't help in distinction of distribution, then go for third moment.
+
+
+KURTOSIS:
+
+GAME 1: probability of 0.5 with  win 1$, probability of 0.5 with lose 1$.
+GAME 2: probability of 100/202 with  win 10 cents, probability of 100/202 with lose 10cents. probability of 1/202 win 10$, probability of 1/202 lose 10$.
+
+
+ASSESSING NORMALITY OF DISTRIBUTION:
+To evaluate whether data is normally distributed or not, we can use QQPLOTS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
