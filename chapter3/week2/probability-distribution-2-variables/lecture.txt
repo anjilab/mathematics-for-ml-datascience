@@ -1,0 +1,26 @@
+Joint distribution:
+
+When 2 RV are observed together, we use joint distribution. Here, age & height of children. Probability of children age greater than 5 and ht > 20.
+X: Age, Y:height
+
+Probability mass function can be obtained when frequency table of your discrete data is divided by total number of data.
+let X: number rolled on the first dice, Y: number rolled on the second dice, X: number rolled on the first dice & Y: sum of both dice. Here, X&Y both are discrete RV.
+
+In continuous RV, like X:watiting time in call center between 0-10 minutes and Y: customer rating.
+
+Marginal and conditional distribution:
+
+Marginal distribution is like when there are two variable, we ignore one variable & that distribution obtained of one variable ignoring the other.
+to find the marginal distribution of height then sum the joint probability distribution  over all values of age(summing over column). P(Y=y) = Here Y needs to be constant and X varies hence marginalising X. Sum of all probability values of X for that value of Y. Summing over all values of X=x_i  keeping Y=y.Likewise for P(X=x) = Here X needs to be constant, & Y varies hence marginalizing Y(summing over row).
+
+Conditional distribution:
+Age =9 , find the distribution across the height variable ? P(Y=y|X=9) = Joint Probability of X & Y / Marginal Probability for X=9
+
+For continuous random variables, P(Y=y|X=waiting time between 0-5) =  Joint Probability of X & Y / Marginal Probability for X=[0-5]
+
+So, Joint probability of TWO RV = conditional probability * marginal probability.
+
+
+COVARIANCE:
+
+We know, X: Age has its own variance and Y: has its own variance, But here we didn't account for any kind of relationship between two variables X & Y. To find covariance, center them and sum of them. so covariance is sum of product of x & y but actually its centering the data and taking the average of all these products. it measures what does first variable relates to second variable like if it grows or make it decrease or do nothing.
