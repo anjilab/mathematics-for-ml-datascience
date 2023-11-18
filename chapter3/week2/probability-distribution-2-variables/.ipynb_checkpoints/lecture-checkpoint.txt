@@ -24,3 +24,55 @@ So, Joint probability of TWO RV = conditional probability * marginal probability
 COVARIANCE:
 
 We know, X: Age has its own variance and Y: has its own variance, But here we didn't account for any kind of relationship between two variables X & Y. To find covariance, center them and sum of them. so covariance is sum of product of x & y but actually its centering the data and taking the average of all these products. it measures what does first variable relates to second variable like if it grows or make it decrease or do nothing.
+
+COV(X,Y) = Sum of product of (x-mu_of_x)(y-mu_of_y)/number_of_items => 1/n when equal probabilities
+
+COVARIANCE OF PROBABILITY DISTRIBUTION
+Var(X) = E[X^2] - E[X]^2
+COV(X,Y) = Sum of product of (x-mu_of_x)(y-mu_of_y) * prob(x,y) =>  multiply by prob(x,y) when unequal probabolities= E[XY] -  E[X]E[Y]
+
+
+COVARIANCE MATRIX:
+
+Since, while finding covariance in all above, we are having only one featutres of X. When there are multiple features, like x1,y1,z1 then how would we calculate covariance. Let say we have A,B,C,D,E, total 5 feature variables, then we have to find variance of each feature variables Var(A),Var(B),Var(C),Var(D),Var(E). and find covariance with each other. Cov(A,B),Cov(A,C),Cov(A,D),Cov(A,E),Cov(B,C),Cov(B,D), Cov(B,E), Cov(C,D),  Cov(C,E),Cov(D,E).   so, covariance matrix will be variances in the main diagonal & covarianced between variables in antidiagonal.
+
+
+CORELATION OF COEFFICIENT:
+
+Cov(C,E) = 17, covariances tells how C & E are related,since +ve, if C increased, E also increased and viceversa.
+Cov(D,E) = -7, covariances tells how D & E are related,since -ve, if D increased, E decreased and viceversa.
+
+Now, when signs are ignored, we have values that are bigger to one another, correlation cannot be mentioned.
+
+CORELATION COEFFIECIENT => number lies between -1 to 1, 
+-1 when 2 variables completely negatively related
+1 when 2 variables completely positively related
+smaller the value of correlation coefficienct like nearly to 0, completely uncorelated
+
+Correlation coeff = Cov(X,Y) / (std deviation(x) * std deviation(y))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
