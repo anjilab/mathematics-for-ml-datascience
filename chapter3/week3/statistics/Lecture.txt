@@ -1,0 +1,40 @@
+Population & Sample:
+Population: Entire group of people which we are trying to study. 
+Sample: Small group/subset of people which are trying to study.
+
+It's difficult to study about the whole population. Hence what we do is,we take a group of people in the population and used that group called sample to study about the population. 
+Always random sampling.
+Independent (first sample set and second sample set should be independent, meaning some person might be repeated.)
+Identically distributed. (Use the same rule to pick the sample that were used whenever you need to create 2nd or 3rd sample.)
+
+In machine learning all the dataset are sample.
+
+Population & Sample mean:
+Bigger the sample size, better the poulation estimated mean can be obtained.
+When you need to study of average height of population, we can take randomly sampled subset of population and then calculate the average mean of sample which can be estimated average height of population. But in case of variance, this fails.
+
+
+
+Population & Sample proportion:
+
+Population proportion = number of items with given characteristics / total count of population.
+Sample proportion = number of items with given characteristics in the sample / total count of sample.
+
+In case of variance, for population we use sum of (x-µ)^2/N where N = total number in population. if we measure sample, for every sample, variance changes, some might have large spread or small spread, to make sure the estimated variance of population = variance of sample, we tend to subtract by n-1 rather than simply n.
+
+According to law of large numbers, as the sample size increases, any estimated measures of sample will be nearly equal to measure of population under conditions like sample is drawn randomly,sample size must be large and independent.
+
+CENTRAL LIMIT THEOREM:
+
+No matter from any distribution you begin with, take a sample, find the averages and plot the averages, you will always get the normal distribution.
+As the number of observations increase, the more it looks like gaussian distribution.
+
+When you take sample size = 1, measure the averages and repeat the experiment many many times, observe what happens, again take sample size = 2, and repeat the experiment with sample size = 2, measure the averages & plot average vs probability density functions , many many times, repeat for 3,4, and so on as the sample size increase, the more & more pdf looks like gaussian distribution.
+
+When large enough number of variable is taken, the distribution will approximately follow normal distribution. 
+
+As the number increase, mean of sample becomes closer to mean whereas variance of sample gets population_variance/n 
+
+So CENTRAL LIMIT THEOREM states that, as the number of sample increases(n tends to infinity), the standardized average i.e sampling distribution of the mean will follow standard normal distribution regardless of its original distribution. 
+
+The central limit theorem states that as the sample size increases, the sampling distribution of the mean approaches a normal distribution, regardless of the distribution of the population
