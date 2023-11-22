@@ -1,0 +1,32 @@
+Point estimation:
+
+
+Concept  behine MLE(maximum likelihood estimation)
+
+Popcorn nearby sofa is what you saw, that's your conclusion/facts. 
+Then what might lead to popcorn nearby sofa. One would be watching movies, or napping in sofa or playing card games, the highest probability would be watching movies. what has the highest probability that will lead to popcorn in sofa. its conditional probability P(popcorn|watch_movies), P(popcorn|nap), P(popcorn|cardgames). the highest conditional probability i.e finding scenario that most likely leads to popcorn on the floor. evidence more likely 
+
+
+In ML, model is generated using data with some parameters, mle plays important role when we see model and have to find which model fits the data. i.e finding the model that most likely produce the data. P(data|model1), P(data|model2), P(data|model3). whichever probability is high that is most likely to produce the given data. Here model means having certain parameters. That is what we trying find at what value of parameters in the model gives highest value.
+
+That estimator is called MLE. From a given data, what is the most likely value of parameter that model provides.
+
+There is an observation H,H,H,H,H,H,H,H,T,T. 
+Let us suppose a coin with probability p for heads then probability of coin observing 8H and 2T is given by p^8(1-p)^2. 
+We want p that maximizes the chances of seeing 8 Heads & 2T called likelihood. Probability of seeing data based on model i..e coin L(P;8H) = p^8(1-p)^2. Since our job is to maximize the function of p. rather than dealing with product, we use sum.so using log likelihood
+L(p;8H) =  p^8(1-p)^2
+Using log on both sides"
+log L = 8 logp + 2 log(1-p) 
+take derivative and set it to 0 we will get p = 8/10 so the coin with p = 0.8 has the maximum chance producing the given above observations.
+
+In linear regression, we are finding the line such that the square of distance of given point from the line is minimized called least square. finding line with maximum is same as minimizing the square of distance.
+
+
+REGULARIZATION:
+
+Model: a_n*x^n + a_n-1*x^n-1 + a_n-2*x^n-2 + a_n-3*x^n-3 + ...... + a_0*x^0
+log loss : predicted - actual
+L2 regularization: a_n^2 + a_n-1^2 + ...a_0^2
+
+Regularization parameter = lamda (sometimes rather than using all penalty, we will simply multiply by constants)
+Regularied error = log loss + regularization_parameter
