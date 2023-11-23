@@ -1,0 +1,60 @@
+Interval estimate:
+
+It's about estimating a point with some confidence interval around it. Hypothesis testing: to prove whatever you believe is true or false.
+
+Background:
+Our main goal is to estimate the population value. We tend to randomly sample the population and approximate the mean of population by sample estimates. 
+
+CONFIDENCE INTERVAL:
+
+We know that, it's not possible to calculate mean of all population, so to infer the estimates of population,sampling is done. Sample takes the subset of population & tend to infer the estimate of population. In case of point estimate, we just find the mean & variance of the sample and infer the estimate to population. There are cases where the point estimate don't tend to resemble around the poulation due to small sample size and so on. Therefore, in case of confidence interval, it tries to include the estimate value of whole population within certain degree of population. 
+Hence, confidence interval provides range of values that is likely to contain the population parameter which one is interested to measure. These interval are created by confidence level. If confidence level = 95%, then if the sample population is sampled numerous times with different sample size and interval estimates are measured, the resulting would bracket the true population parameter in approximately 95% of the cases.
+
+
+
+Confidence = 95% means that 95% there is chance, which is likely to capture the true population mean. i.e if we were to take 100 different samples and compute a 95% confidence interval for each sample, then approximately 95 of the 100 confidence intervals will contain the true mean value (μ).
+If 100 different samples from same population is taken, compute their confidence interval for each sample. 95% tells that among all the confidence interval, 95% of those will contain true population parameter. Here it DOESNOT CONFIRM THAT FOR EACH INTERVAL OF EACH SAMPLE THERE IS 95% CHANCE. rather from all collected samples, 95% will contain the values of true mean. 95% means how well your sample represents the population.
+
+EXAMPLE: We have 95% confidence interval for the average weight of 45- 55 kgs of all 25 age female population. It doesn't mean that 45,46,47,48,..52,53,54,55 are equally likely to be weight of 25 age female, instead, it states that there is 95% confidence the true average weight of 25 years fall between 45-55.
+
+In case of confidence interval, we are trying to say that within this interval, the mean population is 95% times within the sample interval.
+
+for constant sample size, confidence level increase, interval larger.
+But as the sample size increases, for same confidence level, interval shrinks.
+
+
+Margin of error helps in determining the confidence of interval. After standardising the distribution(mean= 0  and variance = 1), we tend to revert back to its original distribution by finding margin error = z at alpha(significance level)/2 * std-deviation/ square-root_of_n
+
+To calculate confidence interval:
+1. calcutate sample mean
+2. define desired confidence level ( 1- alpha) = alpha = significance level.
+3. Once confidence level is determined, we can know the critical values (z at alpha/2), Suppose, distribution has 95% confidence level, 95% of area in curve falls. After determining, alpha we can simply use z-distribution to find critical values by looking at table. 
+4. find margin error = sigma/square-root-n (this concept of sigma / root_n, remeber in standarization, sample mean is approximately to population mean but for varaince, population variance is sigma/root n)
+5.add/subtract standard error = critical value * margin error to sample mean. 
+Assumptions is made that simple random sample with size > 30.
+
+
+CALCULATING SAMPLE SIZE.
+If we want small margin error, we will simply plug the value of expected value of margin error in standard error. From which we can get n=sample size.
+
+DIFFERENCE BETWEEN PROBABILITY & CONFIDENCE
+
+IF WE SAY CONFIDENCE INTERVAL CONTAINS THE TRUE PARAMETER OF POPULATION 95% OF THE TIME APPROXIMATELY. ITS CORRECT BUT IF WE SAY THE PROBABILITY THAT THE POPULATION PARAMETER FALLS WITHIN THE INTERVAL IS 95 IS MISTAKE.  
+
+
+All the formula above, we assume that we know the standard deviation of population. When STANDARD DEVIATION of the population is not unknown. So instead of sigma we convert it into 's' where s represents std deviation of sample. While finding interval, we used sigma but now s is used. the original sigma , is normally distributed. Using 's' it's not normally distributed,we called it as student's t distribution. Since, (z at alpha/2) is under normal distribution, the distribution has been changed to t-distribution, so we cannot use (z at alpha/2)* margin error. Instead we use (t at alpha/2)* margin error.
+
+Degree of freedom in t-distribution is given by no_of_samples_used - 1. How high & tight the t-distribution is. 
+Observe normal distribution and compare against the t-distribution. for deg_of_freedom = 1, larger tails.or deg_of_freedom = 5, smaller tails, closer to normal distribution.
+large the degree of freedom, we get closer to normal distribution. It is because, the more the sample size is, the degree of freedom increase, the more the sample size, sample std deviation is closer to population std deviation.
+
+
+
+
+
+
+
+
+
+
+
