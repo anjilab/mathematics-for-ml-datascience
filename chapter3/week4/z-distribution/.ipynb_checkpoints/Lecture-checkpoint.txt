@@ -46,7 +46,7 @@ All the formula above, we assume that we know the standard deviation of populati
 
 Degree of freedom in t-distribution is given by no_of_samples_used - 1. How high & tight the t-distribution is. 
 Observe normal distribution and compare against the t-distribution. for deg_of_freedom = 1, larger tails.or deg_of_freedom = 5, smaller tails, closer to normal distribution.
-large the degree of freedom, we get closer to normal distribution. It is because, the more the sample size is, the degree of freedom increase, the more the sample size, sample std deviation is closer to population std deviation
+large the degree of freedom, we get closer to normal distribution. It is because, the more the sample size is, the degree of freedom increase, the more the sample size, sample standard deviation is closer to population std deviation.
 
 
 
