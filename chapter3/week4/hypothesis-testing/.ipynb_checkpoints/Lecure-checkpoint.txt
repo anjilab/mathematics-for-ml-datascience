@@ -1,0 +1,11 @@
+Hypothesis testing
+
+Statistics is like going beyond your data. Analytics is about analysing the data. Analytics provides answer based on the data whereas Statistics deals with answers in uncertainity. When you are not certain then statistics. Analytics deals with what you know and Statistics deals with what you don't. Decisions under uncertainity is statistics. Changing our minds. Statistical thinking means we take some sample, observe it and we are unsure about certain decision made from sample as it's not about whole population rather specific part of population so not about whole population. we take that uncertain decision and perform certain action hoping it's good. Making a reasonable decision information from partial information. we will not have certain answer. from the information we have we try to make action hoping to be good.
+
+Parameter simply means what our data distribution look like. It defines distrubutoin of data.
+
+We will have facts about data like statistic(summary we computed from sample ), sample(subset of population), observation (one single item from population or sample). We wish we had information/data regarding population(all number of items we are interested at) and parameters (summary of population). To find the data of we wish we had and what we have we will first define hypothesis: (statement about how parameter will look like) and estimate ( best guess of true value of parameter).
+
+
+Hypothesis is just some statements regarding population from your point of view. It might be true or false. belief of parameter of population.
+Here, we have some belief of population is going to be true or not.One popular way is AB testing. For a message, we
