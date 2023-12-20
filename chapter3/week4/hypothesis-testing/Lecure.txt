@@ -11,7 +11,13 @@ Hypothesis is just some statements regarding population from your point of view.
 Here, we have some belief of population is going to be true or not.One popular way is AB testing. 
 It is worse to delete to the good emails that is predicted as spam rather than sending bad emails to inbox. By default, we assume that all emails are ham. If we assume all are good emails, there is less likely we are going to delete the emails. But it is more likely some spam emails might be considered as ham and sent to inbox.So, we assume that the email is ham. So, base hypothesis is that the given email is ham. H0 which means nothing is happening. And Alternative hypothesis is H1 which we are trying to find. This H0 and H1 are mutually exclusive i.e mail cannot be considered ham and spam at the same time.
 Null hypothesis H0 is "MESSAGE IS HAM" is baseline.
-Alternative hypothesis H1 is "MESSAGE IS SPAM" this is what you want to prove.
+Alternative hypothesis H1 is "MESSAGE IS SPAM" this is what you want to prove. No enough evidence that message is spam.
 
 Rejecting "message is not spam" means accepting "message is spam"
 Failing to reject that "message is spam", you are not accepting that "it's ham."
+
+We first determine plenty of evidence against null hypothesis and then reject null hypothesis accepting alternative hypothesis.
+
+Two types of error:
+Type I: False positive: rejecting null hypothesis when it is actually true. a ham email to the spam box.
+Type II: False negative: not rejecting null hypothesis and hypothesis is actually false.
