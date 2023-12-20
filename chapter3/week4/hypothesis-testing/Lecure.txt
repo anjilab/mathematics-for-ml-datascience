@@ -1,8 +1,33 @@
 Hypothesis testing
 
-Statistics is like going beyond your data. Analytics is about analysing the data. Analytics provides answer based on the data whereas Statistics deals with answers in uncertainity. When you are not certain then statistics. Analytics deals with what you know and Statistics deals with what you don't. Decisions under uncertainity is statistics. Changing our minds. Statistical thinking means we take some sample, observe it and we are unsure about certain decision made from sample as it's not about whole population rather specific part of population so not about whole population. we take that uncertain decision and perform certain action hoping it's good. Making a reasonable decision information from partial information. we will not have certain answer. from the information we have we try to make action hoping to be good.
+Statistics is like going beyond your data. Analytics is about analysing the data. Analytics provides answer based on the data whereas Statistics deals with answers in uncertainity. When you are not certain then statistics. Analytics deals with what you know and Statistics deals with what you don't. Decisions under uncertainity is statistics. Changing our minds. Statistical thinking means we take some sample, observe it and we are unsure about certain decision made from sample as it's not about whole population rather specific part of population so not about whole population. we take that uncertain decision and perform certain action hoping it's good. Making a reasonable decision information from partial information. we will not have certain answer. from the information we have we try to make action hoping to be good. In statistics, we trying to find best guess. That best guess or estimate might not work but it is better than all. Here, there is uncertainity so, we are not sure that guess will be correct so, what we need to do find best estimate and test for our decision. Statistics is all about when provided enough evidence, we are trying to change the mind.
 
-Parameter simply means what our data distribution look like. It defines distrubutoin of data.
+Statistical inference is all about using data analysis and statistics in case of uncertainty to come to certain decision, study about underlying distribution of data. Inference means guess. Here,we predict using data. That prediction might be right or wrong. It's uncertain.
+
+We need to ask whether the evidence is strong enough to change our minds. If our mind is set, it means that we have something that is set before data in decision context.Before we begin, before the data, we are either committed to certain action in real world and if evidence is enough to convince not to take the action(Frequentist). Or if there exists some opinion before and if there is enough evidence to reshape our opinion. If there is one of 2 then only statistical inference makes sense otherwise going with the best estimate. for example, there are two items item 1 and item 2, you have to choose one among them, you don't have any preference in the beginning. Then you run A/B testing by showing item 1 and item 2 to certain random number of population. You have found item2 is 0.000001 % better than item 1 then item 2 is the best choice. But it wont make sense if you go with item 1 since there is no any initial preference. If there was any initial preference, we can use statistical inference. Therefore, statistical inference can be done only when:
+1. You cannot answer with certainty,
+2. If you have certain prior action or opinion.
+
+If data do not contradict with the starting preference, then no calculations is needed.
+If data contradict with the starting preference, calculations are needed to figure out if the evidence is strong enough to change the minds.
+
+Confidence interval = frequentist approach
+Credidle interval = bayesian approach
+
+In FREQUENTIST (all about is it good idea to change your default action i.e change your mind), we have default action, this default action is where everything is happy and good.This is the action you are taking without seeing the data and no further information. This is not right or wrong answer. If there is no preferred default action then this whole statistical inference is not needed. So, first of all we need some default action where we are very comfortable at. This is like making decision under no any information. Now, we make decision under the full information. Then we will try to find all the states where our default action is the right choice.
+Alternative hypothesis, what's true when null hypothesis is false. Rejecting null hypothesis means we learned something but not being able to reject null hypothesis means we learned nothing i.e. it doesn't mean we are accepting null hypothesis it means we are sticked to the default action.
+
+p-value = strength of evidence against null hypothesis. While you found evidence to reject null hypothesis and accept alternative hypothesis, we calculate its strength. Null hypothesis: our default action having no effect or difference, alternative hypothesis: action contradicting null hypothesis representing effect or differences. significance level is choosen threshold to decide whether the evidence against  null hypothesis is strong enough to reject it. Usually 0.01 or 0.05. p-value is simply a number which tells about the evidence if null hypothesis can be rejected. p-value, if you fail to reject null hypothesis, you learned nothing, it means you are taking default action only, this p-value determines the how evidence you provided failed to reject null hypothesis, how the value is not surprising.if high values, the evidence is not suprising, you failed to reject null hypothesis and hence continue the default action. if p-value is low, i will change my mind and accept the alternative hypothesis. It's about how foolish you look when sticking to default action. i.e if p-value is smaller(evidence in supporting null hypothesis is weaker), then you will look more foolish in accepting null hypothesis. 
+
+In order to keep doing our default action, we need to look at the p-value or confidence interval. 
+
+The LOWER THE P-VALUE, THE MORE DATA IS YELLING US TO CHANGE OUR MIND.
+
+We need to compare p-value with threshold. this threshold is called significance level, it is the value which determines how much risk you want to tolerate at maximum.
+
+Our task is to find whether there is alien life in planet. i.e. either yes or no. Default action  depends upon your choices. If default action is no, which is taken when there are no any kind of information related to data. Null hypothesis: There is no alien life in planet. (i.e finding all evidence that makes your default action to be true.) Alternative hypothesis: There is alien life in planet. Basically hypothesis testing is all about finding evidence that will make our null hypothesis ridiculous. For example: you took hours in planet, searched everywhere, you didn't find signs of aliens then, it means you failed to reject null hypothesis as you couldn't find any alien. just because you didn't find alien doesn't mean their is no alien right ? so our conclusion is NULL and accept the default action. But if you found alien, that means accepting null hypothesis seems ridiculous as you already saw alien, so, we reject null hypothesis and consider alternative hypothesis as true and switch our action.
+
+Parameter simply means what our data distribution look like. It defines distribution of data.
 
 We will have facts about data like statistic(summary we computed from sample ), sample(subset of population), observation (one single item from population or sample). We wish we had information/data regarding population(all number of items we are interested at) and parameters (summary of population). To find the data of we wish we had and what we have we will first define hypothesis: (statement about how parameter will look like) and estimate ( best guess of true value of parameter).
 
@@ -10,6 +35,7 @@ We will have facts about data like statistic(summary we computed from sample ), 
 Hypothesis is just some statements regarding population from your point of view. It might be true or false. belief of parameter of population.
 Here, we have some belief of population is going to be true or not.One popular way is AB testing. 
 It is worse to delete to the good emails that is predicted as spam rather than sending bad emails to inbox. By default, we assume that all emails are ham. If we assume all are good emails, there is less likely we are going to delete the emails. But it is more likely some spam emails might be considered as ham and sent to inbox.So, we assume that the email is ham. So, base hypothesis is that the given email is ham. H0 which means nothing is happening. And Alternative hypothesis is H1 which we are trying to find. This H0 and H1 are mutually exclusive i.e mail cannot be considered ham and spam at the same time.
+
 Null hypothesis H0 is "MESSAGE IS HAM" is baseline.
 Alternative hypothesis H1 is "MESSAGE IS SPAM" this is what you want to prove. No enough evidence that message is spam.
 
@@ -19,5 +45,27 @@ Failing to reject that "message is spam", you are not accepting that "it's ham."
 We first determine plenty of evidence against null hypothesis and then reject null hypothesis accepting alternative hypothesis.
 
 Two types of error:
-Type I: False positive: rejecting null hypothesis when it is actually true. a ham email to the spam box.
-Type II: False negative: not rejecting null hypothesis and hypothesis is actually false.
+Type I: False positive: rejecting null hypothesis when it is actually true. a ham email to the spam box. foolishly leaving you null hypothesis or changing your mind even though you should not have to change your mind. You rejected the null hypothesis though it was not necessary to reject it. positive => leaving null hypothesis(accepting alternative hypothesis, i.e you are learning something, learning somehting is positive) but reality is that you should not have left. CHANGING YOUR MIND WHEN YOU SHOULD NOT. 
+
+Type II: False negative: not rejecting null hypothesis and hypothesis is actually false. even though you have lot of evidence to reject your null hypothesis you still follow your default action. negative => not leaving null hypothesis (sticking to default action though you should have changed the action.) NOT CHANGING YOUR MIND(sticking to null hypothesis) WHEN YOU SHOULD.
+
+Type I error is worse. Type I error is like convicting innocent people but type II error is like not convicting guilty people.
+
+Sending a regular email to spam is worse than not sending spam email to spam inbox. It is like tolerable to see spam in regular inbox rather than the case to find the perfect ham email in spam box that hase been deleted. So, type I error is worse. Then, tell me the maximum number of times you can accept/tolerate the perfect ham email being sent to spam box. And that maximum level is significance level. it is probability so between 0 and 1. if alpha(significance level) = 0, every mail is ham, no type I error. if alpha = 1, every email is considered to be spam. so we have to make alpha as small as possible i.e 0.05 or 0.01. ham email is spam 5% of the time. making too much small will cause to create more type II error.
+so significance level = max proabbility of causing type I error. or = max probaility of rejecting H0.
+
+These both error plays different role based on the condition. We don't what ground truth is. 
+
+Null hypothesis H0 is "MESSAGE IS HAM" is baseline.
+Ground truth,H0 is true i.e it is not spam i.e it is ham. Your decision is to reject H0, i.e consider email as spam. False Positive. Type I error. 
+
+Ground truth, H0 is false i.e it is spam. i.e it is not ham. Your decision is to accept H0, i.e consider email as spam i.e Correct but what if you rejected H0, i.e you are considering email as not spam, type II error. false negative.
+
+
+We have mail detector. It determines whether incoming mail is spam or ham. We have default action that all the email is ham. Why did we choose this action ? We weigh the importance i.e Which is better ? spam email going to inbox or ham email going to trash(i.e ham email being deleted, you cannot recover that original ham if sent to trash). It's better for us to consider all the emails are ham i.e H0 and alternative hypothesis contradicts i,e email is spam. i.e H1.
+
+Her, rejecting null hypothesis i.e email is ham, means you are accepting that email as spam but If you fail to reject that the email is spam, it doesn't mean the email is ham.
+
+
+
+
