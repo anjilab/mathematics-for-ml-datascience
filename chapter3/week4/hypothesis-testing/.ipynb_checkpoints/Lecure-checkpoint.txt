@@ -68,4 +68,36 @@ Her, rejecting null hypothesis i.e email is ham, means you are accepting that em
 
 
 
+RIGHT-LEFT-TWO TAILED TESTS:
+
+While doing hypothesis testing, we have 2 cases either when standard deviation is known and not known. When standard deviation is not known, t-distribution comes into play. 
+
+Since, everything depends upon data, data must be RELIABLE. Reliable as in representative (we will be taking sample not whole population so that sample needs to represent population. To find average weight of population, if you took weight of people participating in sumo wrestling you will introduce bias, so sample should representative of population. ), randomized and sample size(the size taken should be in a way that would help us to infer to decision).
+
+We have some data, from that observed data we got certain value of mean weight from observed data be mean_1 = 70kgs. Some historical data the mean weight was mean_2 = 68kgs. Based on observed data can we confirm that the weight is increased ? 
+
+So null hypothesis H_0 = nothing changes = 68kgs , mean = 68
+alternative hypothesis H_1= mean weight has increased, mean > 68
+
+These hypothesis that are being set up are always based on population parameter not on the observed data(sample). Hypothesis created on population but decision based on sample mean. TEST STATISTIC IS POPULATION UNDER STUDY i.e sample data's mean CALLED SAMPLE MEAN.
+
+So, when you set hypothesis in a way like, 
+H_0, mean = 68, H_1, mean > 68 => Right tailed test , alternative hypothesis is right of the null hypothesis
+H_0, mean = 68, H_1, mean < 68 => Left tailed test, alternative hypothesis is left of the null hypothesis
+H_0, mean = 68, H_1, mean != 68 => Two tailed test, alternative hypothesis is both ends  of the null hypothesis 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
