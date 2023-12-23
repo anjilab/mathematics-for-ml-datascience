@@ -88,6 +88,10 @@ H_0, mean = 68, H_1, mean != 68 => Two tailed test, alternative hypothesis is bo
 
 
 
+P-value:
+The sample mean falls too far away from null hypothesis, we reject null hypothesis. Suppose population mean is 68kgs and deviation is 3 and sample size = 10. If no change is observed throughtout, then null hypothesis is true when  mean is distrbuted as N(68, 3^2/10). Using this,how likely are you gonna observe the sample if null hypothesis is true. If it is unlikely, then you reject null hypothesis.
+
+
 
 
 
