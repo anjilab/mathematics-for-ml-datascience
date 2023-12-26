@@ -100,8 +100,24 @@ SO, p-value = probablity assuming null hypothesis is true, that the test statist
 
 You can use z-statistic which is standardization , OBSERVED MEAN - POPMEAN/(STD DEVIVATION /SQROOT(SAMPLE SIZE))
 
+P-VALUES AND CRITICAL VALUES:
+
+We know that if p-value is less than significance value, then null hypothesis is rejected. We have to know what is the least extreme sample one could get so that you would still reject null hypothesis. We know we reject H0 when p-value < α but what extreme/least value does p should take in order to reject H0. i.e sample having p-value = α, then we still would reject H0. Any thing less extreme than that sample wouldn't satisfy the condition of the p-value less than α. This value is called critical values. Let us suppose mean population weight = 66.7 kgs. H0: μ = 
+66.7 and H1:  μ > 66.7, here significance level = α = 0.05 so 0.05 = P(x̄ > k0.05 | μ = 66.7), we get k0.05 = 68.26. 
+Decision rule: Reject H0 if x̄ > 68.26, 
+if you take  α = 0.01,  k0.01 = 68.91 Decision rule: Reject H0 if x̄ > 68.91,
+p-value and critical value will have same decision rule leading to same conclusion. 
 
 Significance level: Probability of rejecting null hypothesis when it is true.  When we have to make decision on rejecting null hypothesis, critical value is predetermined before conducting expt. That critical value is called significance level. It is the probability that we are likely to commit type I error if significance level = 0.05 it means there is 5% chance of making type I error i.e there is 5% chance for rejecting null hypothesis even though it was not needed to reject null hypothesis. Rejecting null hypothesis with given significance level means that the observed result is statistically significant at choosen significance level. It states that with provided sample it is not foolish or it is good to have doubt on our null hypothesis. Small significance level, more conservative test, less likely to make type I error but increase the risk of type II error. So trade off between two errors.
+
+NOTE:
+So, we assume our null hypothesis to be true and then calculate a value which shows how weird the results will look. When you conduct a statistical test, you start with the assumption that there is no real effect or difference (this assumption is the null hypothesis). Then, you collect data and calculate a test statistic based on that data.The p-value associated with this test statistic helps you assess how unusual or unexpected your results are, assuming the null hypothesis is true. If the p-value is very small, it suggests that the observed results are unlikely to have occurred by random chance alone, given the assumption of no real effect. In such cases, you may reject the null hypothesis and conclude that there is evidence for a real effect or difference in your data.
+
+So, in simpler terms, the p-value is a measure of how surprised you should be by your results if there is truly no effect. If you're very surprised (small p-value), you might start to question the assumption of no effect and consider alternative explanations.
+
+
+
+
 
 
 
