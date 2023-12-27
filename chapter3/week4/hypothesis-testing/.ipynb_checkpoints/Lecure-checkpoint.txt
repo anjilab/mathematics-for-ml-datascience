@@ -117,6 +117,36 @@ So, in simpler terms, the p-value is a measure of how surprised you should be by
 
 
 
+POWER OF TEST:
+
+In case of Type I error, we are rejecting H0 even though it's true. Changing our mind when we should not have changed our mind then Type I error takes place. Type I error takes place for single value that is when we rejected H0 even though μ =  66.7 and didn't change. But in case of Type II error, we didn't change our mind and stick to H0.Not changing our mind when should have changed our mind and reject null hypothesis and accept alternative hypothesis. In case of type II, for any value  μ > 66.7, if it couldn't change our mind then Type II occurs.
+
+What is the type II error probability if the true value is μ = 70 ? P(Do not reject H0|μ = 70) = P(x̄<68.26|μ = 70)
+
+Type II error: P(Do not reject H0 | μ belongs to H1) = beta
+power of test: P(reject H0 | μ belongs to H1) =  1- beta
+
+
+
+SUMMARY OF HYPOTHESIS TESTING:
+When we have to infer about population and it's not possible to take account of all population, we randomly sample the population and try to learn from the sample. This statistical method of infering population via sample data is called hypothesis testing. We set up H0 and H1.Then collect data 
+and determine whether there is enough evidence to reject the null hypothesis H0.
+
+H0: There is no significant effect or no difference
+H1: Alternative hypothesis. It contradicts H0. tends to state there is difference.
+
+Significance level(α): Choose what significance level you are setting up for the experiment.
+
+Collect and analyse the data: Depending upon the experiment(data and defined hypothesis), use t-test or chi-squared test.
+
+Calculate p-value: if p-value < significance level, reject H0. p-value > significance level: not enough evidence to reject H0.
+
+Finally make decision.
+
+
+
+
+
 
 
 
