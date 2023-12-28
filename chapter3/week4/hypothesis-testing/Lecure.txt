@@ -126,7 +126,27 @@ What is the type II error probability if the true value is μ = 70 ? P(Do not re
 Type II error: P(Do not reject H0 | μ belongs to H1) = beta
 power of test: P(reject H0 | μ belongs to H1) =  1- beta
 
+The probability of correctly rejecting false null hypothesis is called power of a test or β. Ability to detect an effect or difference when it truly exists.It is the probability of type II error, which occurs when null hypothesis is false but the test fails to reject it. STICKING OR NOT CHANGING TO NULL HYPOTHESIS EVEN THOUGH TEST SHOULD HAVE REJECTED IT. When we increased significance level i.e threshold for rejecting null hypothesis, higher power can be achieved but risk of type I error also increases. 
 
+INTERPRETING RESULTS OR HOW WE CONDUCT HYPOTHESIS TESTING: 
+
+Steps:
+1. State your hypothesis 
+- Null hypothesis: H0: μ = 66.7, baseline
+- Alternative hypothesis: H1: μ > 66.7, the statement you want to prove.
+
+2. Design your test.
+- Be sure which test statistic you want to work with, for example x̄, SAMPLE MEAN)
+- Define significance level (α): Max probability making type I error(Changing your mind you didn't need to, Moving to alternative hypothesis when you should have sticked to null hypothesis.),
+
+3. Compute your observed statistic (based on sample) x̄ = 68.442
+
+4. Conclusion: Decision: p-value < α, reject H0. P(x̄ > 68.442 | μ =66.7) > 0.05 ? 
+
+
+
+
+ 
 
 SUMMARY OF HYPOTHESIS TESTING:
 When we have to infer about population and it's not possible to take account of all population, we randomly sample the population and try to learn from the sample. This statistical method of infering population via sample data is called hypothesis testing. We set up H0 and H1.Then collect data 
@@ -142,6 +162,16 @@ Collect and analyse the data: Depending upon the experiment(data and defined hyp
 Calculate p-value: if p-value < significance level, reject H0. p-value > significance level: not enough evidence to reject H0.
 
 Finally make decision.
+
+TOPICS:
+
+Type I error: Rejecting H0 when it was true. Reject H0 when  μ = 66.7
+Type II error: Not rejecting H0 when it was false. Not reject H0 when  μ > 66.7
+There is tradeoff between α and β. when α increase β decrease. So, when significance level increase, chance of type I error increase but type II error decrease and vice versa.
+P-values: criterion for making decision based on data. if p-value < α, we reject H0 and accept H1. But it doesnot represent the probability of H0 being true. it is probability of seeing observed data by chance.  Small p-value indicates that the H0 is not a good model for your data because the chance for seeing that data is very small.
+
+If you reject H0, you accept H1.
+If you didn't reject H0, then does that means H0 is true ? No, it means that there is no enough evidence to reject H0.
 
 
 

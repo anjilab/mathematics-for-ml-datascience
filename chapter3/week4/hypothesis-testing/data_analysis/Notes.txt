@@ -1,0 +1,11 @@
+DATA ANALYSIS: 
+
+When you already have data, and want to make decision based upon those data, then such process is called data anaylysis. This is not about making decision under uncertainity. If you had to make decision under uncertainity, then we called it as statistical inference. 
+
+So, for data analayis we need to know about: 
+1. WHAT KINDS OF DATA i.e DATA TYPE
+2. DISTRIBUTIONS OF DATA
+3. STATISTICAL TESTS
+
+DATA TYPES:
+
