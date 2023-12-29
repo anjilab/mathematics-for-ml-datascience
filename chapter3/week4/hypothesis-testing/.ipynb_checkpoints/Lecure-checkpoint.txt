@@ -155,6 +155,13 @@ t-score or t-value is number of std deviations away from the mean of the t-distr
 When the mean and sigma of population is known, we can model the sample as normally distributed with mean and sigma/std deviation is known. We standardize the gaussian distribution by Z-statistic as z = (X -  μ)/ (σ/sqroot(no of sample)). Whenvever σ is unknown we replace σ with S and this new statistic is t-statistic. t = (X - μ) / (S/sqroot(no of sample)). It has heavier tails. Parameter is S or degrees of freedom that controls how heavy tails are. As the degree of freedom increases, t-distribution posssess normal distribution so we expect sample size greater than 30. Use t-distribution when you know population follows normal distribution but variance is not known.
 
 
+t-tests:
+The mean height for 18 y/o was 66.7 in. Here σ =  3 and n = 10. Our null hypothesis is true then H0: μ = 66.7. Then test statistic x̄ is distributed as N(66.7, 3^2/10). So our plot is based with 66.7 as mean where our null hypothesis lies. But what if σ is unknow, then the x̄ cannot be distributed as normal distribution, so in such case we use t-statistic. Using t-statistics causes our all calculation should depend on t-statistic rather than sample mean. Instead of plotting graph around 66.7 we have to plot around 0. Under null hypothesis H0, t-statistic follow t-distribution follows n-1 = 10-1 = 9 degree of freedom. Like above the three test, right tailed, left tailed and two tailed test should be done based on the t-statistic calculated.
+For right tailed test, Sample mean = 68.442, s = 3.113., n= 10 
+So, t = (x̄ -  μ)/ (s/√(10) =( 68.442 - 66.7) / (3.113/√10)  =1.770.
+P-value = P(x̄ -  μ)/ (s/√(10) > 1.770 |μ=66.7) = 0.0552 > α, DO NOT HAVE ENOUGH EVIDENCE TO REJECT H0.
+
+
 
 
  
