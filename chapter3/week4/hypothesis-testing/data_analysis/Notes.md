@@ -39,7 +39,11 @@ Parameter: measure concerned a population, so it describes population
 Sampling: There are probability and non-probability sampling. Non-probability samples are choosen for specific criteria. Non-probability used in qualitative and exploratory research. often used method but proability sampling such as simple probability sampling and stratified can be used to reduce the risk of sampling bias. Probability sampling used in quantitative research.
 Sampling error :  difference between population parameter and sample statistic.
 Test statistic: Any value or number obtained from statistical test. It describes how far your observation is from the mean.  It tells how different two or more groups are from overall population mean. The test statistic is used to assess the evidence against the null hypothesis. It quantifies how much the observed data deviates from what would be expected under the assumption of no relationship or no difference. The test statistic provides a measure of how "far" the observed data is from what would be expected if the null hypothesis were true.
+Significance level: It is predetermined value choosen before begining our expt. It actually tells us how much we are willing to reject null hypothesis even if it is true. Usually set to small value. If 0.05 = 5% which means we are willing to accept 5% chance of reject true null hypothesis.In about 5 out of 100 experiments, the evidence from the sample might be misleading, leading to the incorrect rejection of a true null hypothesis. So basically, significance level is some threshold researcher set while conducting experiment.  if it is set to 0.05, it means that they are accepting 5% error in accepting the result rejecting the true null hypothesis.If we repeated same experiment out of 100 times only 5 times we will see rejecting H0 even if it is true .
 
+p-value: it is the strength of evidence against null hypothesis. if this is small then significance level, that means the observed data is very less likely to occur under true null hypothesis so we can reject the null hypothesis. smaller p-value means strength is strong enough to reject the null hypothesis. larger p-value means, less strength to reject null hypothesis, that means this observed data are consistent with what would be expected if the null hypothesis were true. 
+
+<b> Small p-value means that the given test statistic is less likely to follow the assumption of null hypothesis being true. small p-value means that we wont be seeing that data under the distribution when we assume that H0 is true. A small p-value indicates that the observed data are less likely to have occurred under the assumption that the null hypothesis is true. In other words, it suggests that the null hypothesis is not a good explanation for the observed results. </b>
 
 So, for data analayis we need to know about: 
 1. WHAT KINDS OF DATA i.e DATA TYPE
@@ -86,7 +90,7 @@ Depending upon measure of variables you can analyze your data.
 | Collection  | By Close ended Questions(gender male or female), open ended Questions (blanks, like age) | close ended question survey | 
 |  Descriptive analysis | Frequency distribution table (count or percentage) | Frequency distribution table (count or percentage)  or bar charts  | grouped frequency distribution table or frequency distribution polygon graph | grouped frequency distribution table or frequency distribution polygon graph |
 | central tendency | mode | median and mode | mean, median, mode| mean, median, mode, geometric mean |
-| variability | - | range | range , std deviation, varaince | range , std deviation, varaince , relative std. deviation |
+| variability | - | range | range , std deviation, variance | range , std deviation, variance , relative std. deviation |
 |  Statistical Test | chi-square goodness of fit test and chi-square test of independence  | any measurement focused on rankings of measurement they are non-parametric tests | both parametric and non-parametric tests | parametric tests |
 
 ## Descriptive Statistics 
@@ -173,7 +177,118 @@ Also known as student's distribution. it is a type of normal distribution for sm
 
 When the data are approximately normally distributed but the population variance is unknown. Variance in t-distribution is estimated by total number of observations - 1.
 
-t-score or t-value is number of std deviations away from the mean of the t-distribution.It is the test statistics. It is used to describe that an observation is how far from the mean when data follows t-distribution. 
+t-score or t-value is number of std deviations away from the mean of the t-distribution.It is the test statistics. It is used to describe that an observation is how far from the mean when data follows t-distribution.
+
+
+## Inferential statistics
+
+Descriptive allows to summarize the characteristics of a data set. Inferential statistics allows us to come to certain decision or make prediction.
+We can use inferential statistics to understand about the larger population from which the sample is taken.
+Two use cases:
+1. Making estimates about population. (mean weight of 18 y/o in US)
+2. Testing hypothesis to draw conclusion about population. (Relationship between weight and fast food consumption)
+
+It is not possible to collect the data of whole population hence we randomly take sample of population we are interested in. Descriptive statistics allows to summarize a sample's characteristics whereas inferential statistics allows to make reasonable guess about the larger population using sample.
+
+The size of sample is always less than that of population size, hence some of population cannot be captured by sample creating sampling error. Sampling error is the difference between true population values (parameters) and measured sample values (statistic).
+
+
+### How to estimate population parameters from sample statistics
+
+Statistic is the measure that describes the sample and parameter is a measure that describes the whole population. Two types of estimates you can make about the population. 
+
+1. Point estimate: Single value estimate of a parameter. Sample mean is point estimate of a population mean.
+2. Interval estimate: Gives you a range of values in which parameter might lie. Confidence interval.
+
+### Confidence interval 
+It uses variability (std deviation, range, variance) around a statistic to come up with  a interval estimate for a parameter. They take sampling error into account. Point estimate gives single exact value for a parameter you are intereseted in but interval estimate (confidence interval) tells you the uncertainty of the point estimate. 
+
+Each confidence interval is related with confidence level. 95% CONFIDENCE INTERVAL means when you repeat your experiment with new other sample of same population 100 times, you expect your estimate to lie within specified range of value 95 times. 
+
+For a study about paid vacation days in a company. You took survey from a random sample. You calculate point estimate and confidence interval. Point estimate of all employee in that company states that sample mean of 19 paid vacation employee in the company takes paid leave. 
+With random sampling, a 95% confidence interval of [16,22] means you can be confident that average number  of vacation days is between 12 and 16.
+
+### Hypothesis testing
+Compare population or assess relationships between variables using sample.  Statistical tests can be either parameteric or non-parametric. Parametric tests can be considered more statistically powerful because they are more likely to detect an effect if one exists. 
+
+Parameteric tests has considerations or assumptions 
+1. Population from which the sample is taken follows normal distribution
+2. sample size is large enough to represent population
+3. variance of each group being compared are similar.
+
+If any of these assumptions is not satisfied then better to do non-parameteric tests. Non-parameteric tests are distribution free test as they do not have assumption anything about distribution of the data.
+
+
+Parametric or non-parametric, these both tests comes in three forms: 
+1. Comparison test: Assess if there are differences in means or medians or rankings of scores of two or more groups. 
+2. Correlation test: Assess to which extent two variables are associated. Most powerful test is pearson's r test but if your data do not follow assumption of parametric test then spearman's r test is choosen in case of interval/ratio. 
+3. Regression test: Whether the change in predictor variable causes changes in an outcome variable.
+
+Following table presents different comparison test:
+ Comparison test | Parametric ? | Comparing statistics | Samples |
+| ------------- | ------------- | ------------- | ------------- |
+| t test  | Yes | Means | 2 samples ( 2 groups) |
+| ANOVA | Yes |  Means  | More than 3 samples |
+| Mood's median | No | Medians| 2+ samples |
+| Wilcoxon signed-rank | No | Distributions | 2 samples |
+| Wilcoxon rank sum  | No  | Sums of rankings | 2 samples | 
+| Kruskal Wallis H | No | Mean rankings| 3+ samples |
+
+
+Following table present different correlation test:
+
+Correlation test | Parametric ? | Variable type |
+| ------------- | ------------- | ------------- | 
+| Pearson's r  | Yes | Interval or ratio |
+| Spearman's r | No | Ordinal/interval/ratio |
+| Chi square test of independence  | No | Nominal/ordinal |
+
+## Degrees of freedom
+ 
+Represented by v or df. number of independent pieces of information that is used to calculate statistics. Sample size if small few independent piece of information and only few degrees of freedom. Large sample size, many degrees of freedom.  It is the number of values that are free to vary. When estimating a parameter, such as the mean or variance, there are often constraints or restrictions placed on the data. Degrees of freedom take into account these restrictions. Here free to vary can be explained using example of 5 numbers that sums up to 100. Summing to 100 is the restriction. For 1st number any integer can be choosen, same for 2nd, 3rd and 4th but in 5th number you do not have choice to choose number. The value can only be one possible number that can take place in 5th number. 5th depended upon 1st,2nd, 3rd and 4th number. So, it was not free to vary. 
+
+The reason why we choose n-1 is that we take into account of the fact of bias. That is we are calculating estimate of sample to infer about population. The reason for using n−1 is to correct for the fact that when estimating parameters from a sample, you are using information from the sample itself (e.g., the sample mean). The use of  n−1 instead of n helps to provide an unbiased estimate of the population parameters. It is based on the idea that using n would underestimate the variability in the population. 
+
+When you estimate a parameter, we need to introduce restrictions in how values are related to each other. 
+v or df =  sample size - number of restrictions. usually restrictions = number of parameters estimated.
+
+"The participants mean salt intake did not differ the recommended amount of 1000 mg, t(9) = 1.41, p=0.19" This means t = t-test is done where 9 is degrees of freedom and p = 0.19 is p-value that states that the strenght of evidence against null hypothesis. If p-value is less than significance level, we have enough evidence to reject null hypothesis.
+
+
+Suppose you’re comparing the average monthly rent in New York, Vancouver, and San Francisco using a one-way ANOVA. You randomly sample 20 apartments in each city. How many within-group degrees of freedom does the test statistic have?
+Here, k = 3 cities = 3 groups
+N = sum of all groups sample size, each group = 20 sample so for 3 groups = 3*20 = 60.
+df = N-k = 60-3 = 57
+
+In one way ANOVA df = k-1 for between-groups and df = N-k for within groups. Total df = N-1 for within groups. N = sum of all groups sample size and k  = number of groups. 
+
+
+## Central limit theorem
+
+If sufficient large samples from population is taken, the samples means will be normally distributed even though population from which samples were taken is not normally distributed.
+
+Draw a random sample from  a population & calculate the statistic for a sample say mean. Now, draw another random sample of same size and again calculate same test statistic i.e mean. You repeat this process many times, You are going to end up with number of means where each mean from each sample. This distribution of sample mean is called sampling distribution. Central limit theorem states that no matter which distribution population is from as long as the sample size is large enough, the sampling distribution of mean will always have normal distribution. Here sufficiently large number of sample means n > or equal to 30.
+
+## Test statistic 
+
+The value calculated from a statistical test of a hypothesis. The summary of sample data used in hypothesis testing. Different statistical test has different formulas to calculate test statistics.  By using certain statistical test, we find a test statistic of sample data. Once this test statistic is calculated, we compare this value with a distribution and this distribution is often called null distribution. (fOR T-TEST, null-distribution is t-distribution, z-test, null -distribution is z-distribution). We are trying to assess whether observed sample data  deviate significantly from what would you expect under null hypothesis is true. Here,we are taking a distribution where null hypothesis is considered to be true (here wer are assuming if that data followed the null hypothesis as true then it would be expected to follow this distribution) and compare it against our test statistic.
+
+It measures the difference between the observed data and  what would be expected under the null hypothesis.
+
+Gist is We will have H0, which states there is no significant difference. We then calculate test statistic. If there was no any difference (H0 is true), then test statistic is expected to follow just by chance(might follow or might not follow, if H0=true and test statistic follows the pattern then there is evidence that H0 is true).  We comparing the test statistic against expected value or pattern. Here expected pattern/value is  based on the distribution followed by the test you have used. If you used t-statistic then we will compare against t-distribution.Then we will check whether calculated statistic follows this expected pattern or not. If the difference of values of t-statistic and expected pattern is too large, it means observed data is less likely to follow that expected distribution/pattern. hence it provides enough evidence to reject H0.When you say "if the difference is very large," you are likely referring to an observed test statistic that is far from what you would expect under the null hypothesis. In the context of hypothesis testing, a large difference or an extreme test statistic suggests that the observed data is unlikely to have occurred by random chance alone.
+
+For example: 
+Your calculated t value of 2.36 is far from the expected range of t values under the null hypothesis, and the p value is < 0.01. This means that you would expect to see a t value as large or larger than 2.36 less than 1% of the time if the true relationship between temperature and flowering dates was 0.
+Therefore, it is statistically unlikely that your observed data could have occurred under the null hypothesis. Using a significance threshold of 0.05, you can say that the result is statistically significant.
+
+Here, you conducted regression test. The test statistic is t-value = 2.36. Using t-statistic, you calculated p-value (it is the strength of rejecting null hypothesis H0 = THERE IS NO RELATIONSHIP BETWEEN TEMP AND FLOWERING DATES). Using formulas we got p-value less than 0.01 where 0.01 is the significance level. This means that you would expect to see a t value as large or larger than 2.36 less than 1% of the time if the true relationship between temperature and flowering dates was 0. Since we rejected H0, we can say there exists statistically significant relationship between temp and flowering dates.
+
+
+
+
+
+
+
 
 
 
