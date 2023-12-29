@@ -38,6 +38,7 @@ Statistic: measure taken from sample, so it describes sample
 Parameter: measure concerned a population, so it describes population
 Sampling: There are probability and non-probability sampling. Non-probability samples are choosen for specific criteria. Non-probability used in qualitative and exploratory research. often used method but proability sampling such as simple probability sampling and stratified can be used to reduce the risk of sampling bias. Probability sampling used in quantitative research.
 Sampling error :  difference between population parameter and sample statistic.
+Test statistic: Any value or number obtained from statistical test. It describes how far your observation is from the mean.  It tells how different two or more groups are from overall population mean. The test statistic is used to assess the evidence against the null hypothesis. It quantifies how much the observed data deviates from what would be expected under the assumption of no relationship or no difference. The test statistic provides a measure of how "far" the observed data is from what would be expected if the null hypothesis were true.
 
 
 So, for data analayis we need to know about: 
@@ -137,6 +138,42 @@ For a parametrical statistical tests, it assumes sample comes from normal distri
 Standard normal distribution is called z-distribution. Special normal distribution where mean = 0 and std deviation = 1. Any normal distribution can be converted into standard normal distribution by converting its value into z-scores. z-score tells about a data point is how many std deviation away from mean. If z-score is +ve, a particular data point is above the mean and below if it is -ve.  z-score = 1, means the data point is 1 std deviation above from the mean and z-score = -2 means the data point is 2 std deviation below from the mean.
 z = x - populationmean/ std deviation.
 WHILE DOING Z-TEST, z-score is the test statistic used in a z-test. z-test is used to compare the means of two groups or to compare the mean of a group to a known value.
+
+## POISSON DISTRIBUTION
+
+Discrete probability distribution, gives probability of a discrete outcome.  Discrete outcome = number of times an event occurs, represented by k. It is particularly useful for situations where events occur independently and at a constant average rate over time or space. Here number of events = disease case, customer purchase.The Poisson distribution is commonly used in various fields, such as queuing theory, telecommunications, biology (for modeling rare events), and reliability engineering. P(X=k)= (e^(-λ)*λ^k)/k! where, P(X=k) Probability of observing k events,λ = average rate of events. k = number of events.
+
+You can use possion distribution when you know that events are happening randomly and independent of each other and the mean number of events occurring within a given interval of time or space.
+
+Specifically for count data. where count data means observations that are non-negative integers. 
+
+Examples: website visits per month, influenza cases per year, text messages per hour.
+​
+
+Note: it has only one parameter i.e mean and variance = same = λ
+
+There should be discrete events and given period of time like people arriving in an hour. phone calls in a day. Events are discrete we can count them like how many people, how many phone calls represented by counts. They cannot happen at the same time. λ = rate , number of events per time period.
+
+Example: if your dog brings a toy to you. It can be modeled as poisson distribution.  number of discrete events = toys brought. λ  = 1, 1 toy per week. In order to find, λ  = 4, 4 toy per week.
+
+As the average rate (λ) increases, the shape of the Poisson distribution becomes more skewed and approaches a normal (Gaussian) distribution, thanks to the central limit theorem. The Poisson distribution is often used as an approximation for the binomial distribution when the number of trials is large, and the probability of success is small. The intuition behind the Poisson distribution comes from situations where rare events happen independently over time or space.
+
+It is discrete, normal is continuous. The shape of poisson distribution depends upon λ. Normal is symmetrical around mean and poisson distribution is right skewed.λ increase, asymmetry decrease. 
+
+## CHI SQUARE DISTRIBUTION
+
+It is continuous probability distribution so has probability density function. It is widely used in hypothesis testing chi squared goodness of fit and chi squared test of independence. The shape of chi-square distribution is determined by k, here k = degree of freedom. Very few real world observations follow chi squared. Its main purpose is for hypothesis testing. Its shape depends on value of k.mean of chi-square distribution is k and variance is 2k. range is 0 to infinity.
+
+Relationship of chi square and standard normal distribution. 
+
+Std normal distribution: Normal distribution where mean = 0 and std deviation = 1. Take a random sample of standard distribution, square all the values in the sample, you would have chi squared distribution with k = 1. X1^2 = Z1^2 + Z2^2. Here only 1 std normal distribution. Take samples from two std normal distribution Z1 and Z2, If each time you sampled a pair of values, you squared them and added them together, you would have the chi-square distribution with k = 2. X2^2 = Z1^^2 + Z2^2 
+
+## t-distribution
+Also known as student's distribution. it is a type of normal distribution for small sample size and variance of data is unknown. Here the data follows the bell-shaped curve with greatest number of observation close to mean and few or rest observations in the tails of the either side.
+
+When the data are approximately normally distributed but the population variance is unknown. Variance in t-distribution is estimated by total number of observations - 1.
+
+t-score or t-value is number of std deviations away from the mean of the t-distribution.It is the test statistics. It is used to describe that an observation is how far from the mean when data follows t-distribution. 
 
 
 
