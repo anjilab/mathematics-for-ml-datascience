@@ -143,6 +143,19 @@ Steps:
 
 4. Conclusion: Decision: p-value < α, reject H0. P(x̄ > 68.442 | μ =66.7) > 0.05 ? 
 
+t-distribution:
+
+Also known as student's distribution. it is a type of normal distribution for small sample size and variance of data is unknown. Here the data follows the bell-shaped curve with greatest number of observation close to mean and few or rest observations in the tails of the either side.
+
+When the data are approximately normally distributed but the population variance is unknown. Variance in t-distribution is estimated by total number of observations - 1.
+
+t-score or t-value is number of std deviations away from the mean of the t-distribution.It is the test statistics. It is used to describe that an observation is how far from the mean when data follows t-distribution. 
+
+
+When the mean and sigma of population is known, we can model the sample as normally distributed with mean and sigma/std deviation is known. We standardize the gaussian distribution by Z-statistic as z = (X -  μ)/ (σ/sqroot(no of sample)). Whenvever σ is unknown we replace σ with S and this new statistic is t-statistic. t = (X - μ) / (S/sqroot(no of sample)). It has heavier tails. Parameter is S or degrees of freedom that controls how heavy tails are. As the degree of freedom increases, t-distribution posssess normal distribution so we expect sample size greater than 30. Use t-distribution when you know population follows normal distribution but variance is not known.
+
+
+
 
  
 
@@ -161,9 +174,16 @@ Calculate p-value: if p-value < significance level, reject H0. p-value > signifi
 
 Finally make decision.
 
+TOPICS:
+
 Type I error: Rejecting H0 when it was true. Reject H0 when  μ = 66.7
 Type II error: Not rejecting H0 when it was false. Not reject H0 when  μ > 66.7
 There is tradeoff between α and β. when α increase β decrease. So, when significance level increase, chance of type I error increase but type II error decrease and vice versa.
+P-values: criterion for making decision based on data. if p-value < α, we reject H0 and accept H1. But it doesnot represent the probability of H0 being true. it is probability of seeing observed data by chance.  Small p-value indicates that the H0 is not a good model for your data because the chance for seeing that data is very small.
+
+If you reject H0, you accept H1.
+If you didn't reject H0, then does that means H0 is true ? No, it means that there is no enough evidence to reject H0.
+
 
 
 

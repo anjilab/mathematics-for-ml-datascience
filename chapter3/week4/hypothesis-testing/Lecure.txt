@@ -143,6 +143,17 @@ Steps:
 
 4. Conclusion: Decision: p-value < α, reject H0. P(x̄ > 68.442 | μ =66.7) > 0.05 ? 
 
+t-distribution:
+
+Also known as student's distribution. it is a type of normal distribution for small sample size and variance of data is unknown. Here the data follows the bell-shaped curve with greatest number of observation close to mean and few or rest observations in the tails of the either side.
+
+When the data are approximately normally distributed but the population variance is unknown. Variance in t-distribution is estimated by total number of observations - 1.
+
+t-score or t-value is number of std deviations away from the mean of the t-distribution.It is the test statistics. It is used to describe that an observation is how far from the mean when data follows t-distribution. 
+
+
+When the mean and sigma of population is known, we can model the sample as normally distributed with mean and sigma/std deviation is known. We standardize the gaussian distribution by Z-statistic as z = (X -  μ)/ (σ/sqroot(no of sample)). Whenvever σ is unknown we replace σ with S and this new statistic is t-statistic. t = (X - μ) / (S/sqroot(no of sample)). It has heavier tails. Parameter is S or degrees of freedom that controls how heavy tails are. As the degree of freedom increases, t-distribution posssess normal distribution so we expect sample size greater than 30. Use t-distribution when you know population follows normal distribution but variance is not known.
+
 
 
 
