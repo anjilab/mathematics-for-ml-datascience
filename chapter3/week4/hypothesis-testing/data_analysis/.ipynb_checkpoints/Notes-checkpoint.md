@@ -45,6 +45,16 @@ p-value: it is the strength of evidence against null hypothesis. if this is smal
 
 <b> Small p-value means that the given test statistic is less likely to follow the assumption of null hypothesis being true. small p-value means that we wont be seeing that data under the distribution when we assume that H0 is true. A small p-value indicates that the observed data are less likely to have occurred under the assumption that the null hypothesis is true. In other words, it suggests that the null hypothesis is not a good explanation for the observed results. </b>
 
+standard error: Variability across multiple samples of a population. how different is population mean from sample mean.s
+standard deviation: variability within a sample of a population.
+
+That’s why APA guidelines advise reporting not only p values but also effect sizes and confidence intervals wherever possible to show the real world implications of a research outcome. We also have practical and clinical significance too as p-values are considered not only ways for decision making.
+
+power: probability of avoiding a Type II error (failing to reject null hypothesis even though it is false) . The higher the statistical power of a test, the lower the risk of making a Type II error.Power is usually set at 80%. This means that if there are true effects to be found in 100 different studies with 80% power, only 80 out of 100 statistical tests will actually detect them. If you don’t ensure sufficient power, your study may not be able to detect a true effect at all. This means that resources like time and money are wasted, and it may even be unethical to collect data from participants (especially in clinical trials).
+
+SKEWNESS: Asymmetry of distribution
+Kurtosis: the heaviness of a distribution’s tails relative to a normal distribution.
+
 So, for data analayis we need to know about: 
 1. WHAT KINDS OF DATA i.e DATA TYPE
 2. DISTRIBUTIONS OF DATA
@@ -208,6 +218,21 @@ Each confidence interval is related with confidence level. 95% CONFIDENCE INTERV
 For a study about paid vacation days in a company. You took survey from a random sample. You calculate point estimate and confidence interval. Point estimate of all employee in that company states that sample mean of 19 paid vacation employee in the company takes paid leave. 
 With random sampling, a 95% confidence interval of [16,22] means you can be confident that average number  of vacation days is between 12 and 16.
 
+Confidence interval is  mean of your estimate with plus and minus of the variance. This is the range of values you expect your parameter mean to lie within a certain level of confidence if you redo your test.  
+Confidence level = 1- significance level.
+
+## Critical values
+
+Most of the statistical test returns p-value that is used in decision making but some test might not return p-values so the alternative method for such use case is critical values. 
+You can do hypothesis testing by using p-value or by using critical values. In case of p-value, first we would find test statistic and from test-statistic, we determine p-value and compare against significance value. In case of critical value, first we would find test statistic and finding the value of the known distribution of the test statistic such that the probability of making a Type I error — which is denoted 
+ (greek letter "alpha") and is called the "significance level of the test" — is small (typically 0.01, 0.05, or 0.10) as critical values and compare your test statistic to the critical values. 
+ 
+Critical values tell you how many standard deviations away from the mean you need to go in order to reach the desired confidence level for your confidence interval. Critical value and significance value might seem to be related but both serve different purpose. Significance level determines maximum probability that you allow yourself to make type i error i.e rejecting true null hypothesis.
+
+Critical value splits the graphs into section. One or two of the section is rejection region. If your test statistic falls into that region, you reject the null hypothesis.  They are the cut off values that defines the region where the test statistic is unlikely to lie. Critical value for different distribution is different. For standard normal distribution(z) with different significance level, have different critical value. By the help of critical value we can determing confidence interval too.
+
+
+
 ### Hypothesis testing
 Compare population or assess relationships between variables using sample.  Statistical tests can be either parameteric or non-parametric. Parametric tests can be considered more statistically powerful because they are more likely to detect an effect if one exists. 
 
@@ -220,9 +245,9 @@ If any of these assumptions is not satisfied then better to do non-parameteric t
 
 
 Parametric or non-parametric, these both tests comes in three forms: 
-1. Comparison test: Assess if there are differences in means or medians or rankings of scores of two or more groups. 
-2. Correlation test: Assess to which extent two variables are associated. Most powerful test is pearson's r test but if your data do not follow assumption of parametric test then spearman's r test is choosen in case of interval/ratio. 
-3. Regression test: Whether the change in predictor variable causes changes in an outcome variable.
+1. Comparison test: Assess if there are differences in means or medians or rankings of scores of two or more groups. difference among group means.
+2. Correlation test: Assess to which extent two variables are associated. Most powerful test is pearson's r test but if your data do not follow assumption of parametric test then spearman's r test is choosen in case of interval/ratio. checks whether variables are related or not without hypothesizing that there exists cause and effect relationship.
+3. Regression test: Whether the change in predictor variable causes changes in an outcome variable. looks for cause-and-effect relationship.
 
 Following table presents different comparison test:
  Comparison test | Parametric ? | Comparing statistics | Samples |
@@ -282,6 +307,127 @@ Your calculated t value of 2.36 is far from the expected range of t values under
 Therefore, it is statistically unlikely that your observed data could have occurred under the null hypothesis. Using a significance threshold of 0.05, you can say that the result is statistically significant.
 
 Here, you conducted regression test. The test statistic is t-value = 2.36. Using t-statistic, you calculated p-value (it is the strength of rejecting null hypothesis H0 = THERE IS NO RELATIONSHIP BETWEEN TEMP AND FLOWERING DATES). Using formulas we got p-value less than 0.01 where 0.01 is the significance level. This means that you would expect to see a t value as large or larger than 2.36 less than 1% of the time if the true relationship between temperature and flowering dates was 0. Since we rejected H0, we can say there exists statistically significant relationship between temp and flowering dates.
+
+The test statistic tells you how different two or more groups are from the overall population mean, or how different a linear slope is from the slope predicted by a null hypothesis. 
+
+The right statistical test can be choosen based on what kind of data( nominal, ordinal, interval and ratio) is collected and relationship you want to test.
+
+Statistical significance means that you are accepting alternative hypothesis i.e the statement you are trying to prove. Here you are saying that observed data is unlikely to be observed under true null hypothesis.
+
+
+## Statistical test:
+
+Assumptions of statistical test:
+Population from which the sample is taken follows normal distribution
+2. sample size is large enough to represent population
+3. variance of each group being compared are similar.
+
+
+Which test to perform ? ![Statistical test flowchar](./flowchart-for-choosing-a-statistical-test.png)
+
+First check independent/predictor variable type ? Categorical or quantititative. 
+If independent variable is categorical then check dependent/outcome variable type ? Categorical or quantitative ? If it's categorical, choose non-parametric test. 
+If independent variable is  quantitative  then check dependent/outcome variable type ? Categorical or quantitative ? If it's categorical, choose logistic regression.
+
+Independent variable = quantitative, dependent variable = quantitative,  check how many independent variables ? 1 = simple regression. more than 1 = multiple regression.
+
+Independent variable = categorical, dependent variable = quantitative. Do comparison of means test. How many groups being compared ? 2 groups then t-test. if more than 2 groups then how many dependent variables ?  if 1 = ANOVA. if more than 1 = MANOVA. 
+
+
+## t-test 
+
+Comparison of means of 2 groups. 
+It is used in hypothesis testing, with a null hypothesis that the difference in group means is zero and an alternate hypothesis that the difference in group means is different from zero.A t-test measures the difference in group means divided by the pooled standard error of the two group means.
+In this way, it calculates a number (the t-value) illustrating the magnitude of the difference between the two group means being compared, and estimates the likelihood that this difference exists purely by chance (p-value).
+
+Here, if 2 groups from same population  (within-subject design), perform paired t-test.  
+if groups  from 2 different population (between subject design), perform two-sample t-test(independent t-test).
+if only one group compared against a standard value, then use one-sample t-test.  
+
+if want to know 2 populations are different from one another, perform two-tailed test. (2 separate populations) 
+if want to know one population means is greater or less than another then , perform one-tailed test. (only care about if there is difference or not).
+
+Determine the t-value by finding difference between means of two population and then dividing by square root of (product of square of sample variance with (1/n1 + 1/n2)). 
+
+When there are more than 2 groups, do not use t-test.
+when dependent quantitative variable and independent categorical variable.
+
+
+## pearson's chi-squared test
+
+Test for categorical data.Non-parametric test. There are two types of chisquared test
+
+1. goodness of fit: frequency distribution of a categorical variable is different from your expectations.When only one categorical variable is there. goodness of fit = high, values expected based on the model are closer to the observed values. goodness of fit = low, values expected based on the model are far away from the observed values. 
+2. independence: test whether two categorical variables are related to each other. when there is 2 categorical variables.if 2 variables are independent or unrelated then probability of belonging to certain  group of one variable is unaffected by other variable.
+
+
+Example: Reporting a chi-square test
+There was no significant relationship between handedness and nationality, Χ2 (1, N = 428) = 0.44, p = .505. This means we have conducted chi squared test with 1 degree of freedom, and sample size = 428 with chi-square value = 0.44 and p-value is 0.505. Since 0.505 > 0.05, We do not have enough evidence to reject null hypothesis.  
+
+Chi-square and correlation test both measures the relationship but main difference is chi squared is used when we have 2 categorical variables and correlation is used when we have 2 quantitative variables.
+
+chi-square = Sum of (O − E)^2 / E Using this formula once you find chisquare value, determine critical value using degree of freedom and siginificance level by using chi square table and then decide whether to reject null hypothesis. x^2 value > critical reject the null hypothesis and state there is significant difference.
+
+
+## ANOVA
+
+Analysis of variance is the measure of difference in means of two or more than 2 groups.
+
+2 types:
+1. One-way ANOVA: 1 categorical independent variable. Testing the effect of three different fertilizer mixtures on crop yield. You can use a one-way ANOVA to find out if there is a difference in crop yields between the three groups. Fertilizers is independent variable. Crop yielding is depenedent quantitative variable. Use this method when you have 1 categorical independent varaible (Minimum 3 categories) and 1 quantitative dependent variable. If your independent variable is social media use, its 3 level includes, high, medium and low, then dependent quantitative variable would be hrs of sleep / day. Testing the relationship between shoe brand (Nike, Adidas, Saucony, Hoka) and race finish times in a marathon.
+2. Two-way ANOVA: 2 independent variable. Testing the relationship between shoe brand (Nike, Adidas, Saucony, Hoka), runner age group (junior, senior, master’s), and race finishing times in a marathon. 2 independent categorical variable i.e shoe brand and runner age group. and race finishing times is our dependent/outcome quantitative varible. How 2 independent variables in combination, affect a dependent variable.
+A two-way ANOVA with interaction tests three null hypotheses at the same time:
+
+1. There is no difference in group means at any level of the first independent variable.
+2. There is no difference in group means at any level of the second independent variable.
+3. The effect of one independent variable does not depend on the effect of the other independent variable (a.k.a. no interaction effect).
+
+A two-way ANOVA without interaction (a.k.a. an additive two-way ANOVA) only tests the first two of these hypotheses.
+
+ANOVA determines whether the groups created by the levels of the independent variable are statistically different by calculating whether the means of the treatment levels are different from the overall mean of the dependent variable.
+
+If any of the group means is significantly different from the overall mean, then the null hypothesis is rejected.
+
+Uses F-test to determine statistical significance.
+
+
+Results reporting of ANOVA. We found a statistically-significant difference in average crop yield according to fertilizer type (F(2)=9.073, p < 0.001). A Tukey post-hoc test revealed significant pairwise differences between fertilizer types 3 and 2, with an average difference of 0.42 bushels/acre (p < 0.05) and between fertilizer types 3 and 1, with an average difference of 0.59 bushels/acre (p < 0.01). Here F(2) where F-value is 9.073 for degree of freedom = 2 and p-value is < 0.0001.
+
+In ANOVA, the null hypothesis is that there is no difference among group means. If any group differs significantly from the overall group mean, then the ANOVA will report a statistically significant result.Significant differences among group means are calculated using the F statistic, which is the ratio of the mean sum of squares (the variance explained by the independent variable) to the mean square error (the variance left over).
+If the F statistic is higher than the critical value (the value of F that corresponds with your alpha value, usually 0.05), then the difference among groups is deemed statistically significant.
+
+
+## Regression
+
+Linear and multiple regression are two methods which deals with quantitative variables and estimates the relationship between independent variable and dependent variable. In case of logistic regression, we deal with categorical variable. Multiple regression is about finding relationship between quantitative dependent variable and 2 or more independent variable using st. line.  y = a1x1+ a2x2 + c1
+
+## Correlation
+
+Correlation there exists certain relationship between variables. A relates to B is correlation but doesn't mean A causes B to occur. Correlation talks about the relationship but doesn't state direct or indirect causal link. Causation means change in one variable causes change in another varaible. Cause and effect relationship in causation. Correlation doesn't imply causation but causation always means there exists correlation.
+
++ve correlation = both variable change in same direction
+-ve correlation = variables change in opposite direction
+0 correlation = no any relationship.
+
+
+
+Statistical test | Purpose | When to use it | Distribution | Data type | What it shows | test statistic | degrees of freedom | p-value |  
+| ------------- | ------------- | ------------- | ------------- | ------------- |  ------------- |  ------------- | ------------- | ------------- |
+| t test  | Comparison of means of 2 groups | Pairwise comparison. Two related groups to compare, to determine whether two grops are different from one another | normal approximately normal distribution when population variance is unknown |  continuous | if there is significant difference between means of two groups. | t-value is calculated based on difference in means between two groups and variability within the groups |  number of samples - restrictions i.e number of independent information that is available to estimate population parameters.  | probability of obtaining the observed difference between the groups assuming the null hypothesis is true.  |
+| ANOVA | Compare means of multiple groups | 3 or more than 3 groups mean comparison | normally distributed | numerical | significant differences between group means | within the groups: information about variation of each group |  between groups: information about variation between the different groups being compared  | rather than p-value, we have total in case of ANOVA which is the sum of squares and sum of degrees of freedoms from the entire dataset combining between and within group variations. |
+| Chi-squared test | Test for assosication or relationship between variables | Assessing the relationship between categorical variables| No strict distribution required as it is non-parametric test | only on categorical type of data in independent variable | trying to find if there is significant difference between observed and expected values. | measures the discrepancies between observed and expected frequencies | df =  number of categories  - 1 | probability associated with test statistic i.e level of statistical significance. |
+| Regression  | Examine the relationship between 2 variables | To predict the value of dependent variable | Non parametric test- no any distribution requirement |  numerical/quantitative | Assess the strenght and significance of relationships. | y = mx+c |  m and c are the coefficients. these are constant, R^2: Proportion of the variance in the dependent variable that is explained by the independent variables. | statistical significance of coefficient.  |
+| Correlation  | Comparison of means of 2 groups | Pairwise comparison. Two related groups to compare, to determine whether two grops are different from one another | normal approximately normal distribution when population variance is unknown |  continuous | if there is significant difference between means of two groups. | t-value is calculated based on difference in means between two groups and variability within the groups |  number of samples - restrictions i.e number of independent information that is available to estimate population parameters.  | probability of obtaining the observed difference between the groups assuming the null hypothesis is true.  |
+| Wilcoxon signed-rank | No | Distributions | 2 samples |
+| Wilcoxon rank sum  | No  | Sums of rankings | 2 samples | 
+| Kruskal Wallis H | No | Mean rankings| 3+ samples |
+
+
+
+
+
+
+
 
 
 
