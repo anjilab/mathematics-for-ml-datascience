@@ -407,7 +407,10 @@ Correlation there exists certain relationship between variables. A relates to B 
 
 +ve correlation = both variable change in same direction
 -ve correlation = variables change in opposite direction
-0 correlation = no any relationship.
+0 correlation = no any relationship. 
+
+
+## Pearson's correlation 
 
 
 
@@ -417,11 +420,12 @@ Statistical test | Purpose | When to use it | Distribution | Data type | What it
 | ANOVA | Compare means of multiple groups | 3 or more than 3 groups mean comparison | normally distributed | numerical | significant differences between group means | within the groups: information about variation of each group |  between groups: information about variation between the different groups being compared  | rather than p-value, we have total in case of ANOVA which is the sum of squares and sum of degrees of freedoms from the entire dataset combining between and within group variations. |
 | Chi-squared test | Test for assosication or relationship between variables | Assessing the relationship between categorical variables| No strict distribution required as it is non-parametric test | only on categorical type of data in independent variable | trying to find if there is significant difference between observed and expected values. | measures the discrepancies between observed and expected frequencies | df =  number of categories  - 1 | probability associated with test statistic i.e level of statistical significance. |
 | Regression  | Examine the relationship between 2 variables | To predict the value of dependent variable | Non parametric test- no any distribution requirement |  numerical/quantitative | Assess the strenght and significance of relationships. | y = mx+c |  m and c are the coefficients. these are constant, R^2: Proportion of the variance in the dependent variable that is explained by the independent variables. | statistical significance of coefficient.  |
-| Correlation  | Comparison of means of 2 groups | Pairwise comparison. Two related groups to compare, to determine whether two grops are different from one another | normal approximately normal distribution when population variance is unknown |  continuous | if there is significant difference between means of two groups. | t-value is calculated based on difference in means between two groups and variability within the groups |  number of samples - restrictions i.e number of independent information that is available to estimate population parameters.  | probability of obtaining the observed difference between the groups assuming the null hypothesis is true.  |
-| Wilcoxon signed-rank | No | Distributions | 2 samples |
-| Wilcoxon rank sum  | No  | Sums of rankings | 2 samples | 
-| Kruskal Wallis H | No | Mean rankings| 3+ samples |
-
+| Pearson's Correlation  | Measures the strength of linear relationship | Assess the strength and direction of a linear relationship | normal distribution |  numerical | look for correlation coefficient and its significance. | strength and direction of the linear relationship between the variables. It ranges from -1 to +1. A positive value indicates a positive correlation, a negative value indicates a negative correlation, and a value close to zero indicates a weak or no correlation. |  sample size = number of data points used to calculate the correlation coefficient | p-value is the Probability of observing the given correlation coefficient by chance. |
+| Spearman's Correlation  | Measure the strength of monotonic relationship |Assess the strength and direction of a monotonic relationship | no strict distribution requirement |  numerical/ordinal | Look for correlation coefficient and its significance | correlation coefficient strength and direction of linear relationship between variables |  sample size = number of data points used to calculate the correlation coefficient | p-value is the Probability of observing the given correlation coefficient by chance. |
+| Mann Whitney U test  | Compare distributions of two groups |Compare distributions of two independent groups | no strict distribution requirement |  numerical/ordinal | Significant differences in rank order | u-statistic = Rank-based test statistic used in the Mann-Whitney U test. It quantifies the degree of difference between the two groupss |  - | p-value iStatistical significance of the test. It indicates the probability of obtaining the observed difference between the groups if there were no true differences in the populations from which the samples were drawn.|
+| Kruskal Wallis  | Compare distributions of multiple groups |Compare distributions of three or more independent groups | no strict distribution requirement |  numerical/ordinal | Look for significant differences in rank order | H-statistic: Sum of ranks across all groups and is used to assess the differences between the groups. |  df = number of groups minus 1 | p-value = Strength of evidence against the null hypothesis (the assumption that there are no differences between the groups|
+| One sample t test  | Compare sample mean to a known population mean | Compare a sample mean to a known value | Normally distributed |  numerical |  Look for significant differences between the sample mean and the known population mean |t-statistic: Difference between the sample mean and the hypothesized population mean in terms of standard errors. |  sample size = Number of data points used to calculate the correlation coefficient  | p-value = Probability of obtaining the observed difference (or a more extreme difference) between the sample and the hypothesized population by chance alone |
+| Wilcoxon  Signed Rank | Compare paired samples | Compare paired observations| No strict distribution requirement |  Numerical/Ordinal |  rences between paired observations |V : DSummarizes the data and is used to assess the statistical significance of the test. |  -  | p-value = Statistical significance of the test |
 
 
 
