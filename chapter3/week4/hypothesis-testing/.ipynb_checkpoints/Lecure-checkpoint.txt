@@ -192,6 +192,21 @@ x1 -x2 ~ N(μ1-μ2,sqroor of  (σ1^2 / n1 + σ2^2 / n2)) If in case σ1 or σ2 i
 The formula of degree of freedom is different.
 
 
+Paired test: There is gonna be two groups but in this test same participants in both groups. i.e to measure effect in memory with respect to mobile usage. Here first 100 participants took part in the study and for 4 weeks they are continuosly controlled with their mobile usage and finally after 4 weeks the same 100 partipants results are measured. Hence, paired. Here we are interested in difference between pairs.
+Suppose there are 10 participants. Before test, consider them as X and after test the same participant referenced as Y. Now, we are interested in difference between pairs. i.e X1- Y1, X2 -Y2, X3-Y3 ... SO D1 = X1- Y1, D2= X2 -Y2, D3 = X3-Y3 & so on. 
+D = sum of all pairs differences / number of sample.
+X&Y are gaussian so D will also be gaussian.
+
+Let us suppose we have 10 observations, X, X1 = 251.9, X2 = .. and Y,Y1=251.5 . This X1 and Y1 observations are of same person. We calculated the difference. D = 251.9 - 251.5 = 0.4. similarly for all 10 observations we find differences, then sum that difference and divide by total number of sample. we get:  d̅ = 1.09. We don't have population std deviation so, sD = 1.485. Using t-distribution:
+t = (1.09 - 0) / (1.485 / sqroot(10)) =  2.321, here 1.09 - 0 BECAUSE μ1-μ2 HERE μ1,μ2 is of same population so difference will be 0.
+
+For right tailed test, hypothesis is given by
+H0: μD = 0 vs μD > 0
+If H0 is true: 
+t-statistic (degree of freedom) = 10-1 = 9, t = ( d̅- 0) / (sD / sqroot(10)) , T =2.321
+P-value = P(T > 2.321 |μD > 0) = 0.0227 < 0.05 So, reject null hypothesis. Since p-value is less than significance level, it means the observed value is less likely to be observed under null hypothesis is true.
+
+
 
 
 
