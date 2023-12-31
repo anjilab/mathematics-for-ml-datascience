@@ -164,6 +164,37 @@ P-value = P(x̄ -  μ)/ (s/√(10) > 1.770 |μ=66.7) = 0.0552 > α, DO NOT HAVE 
 
 
 
+Two sample test: In 2 sample test, two population groups were independent.
+
+When we have 2 different populations, so we take 2 different sample. We are trying to test these samples. 2 sample test explains how do we compare samples on different populations.
+
+For example>;
+Weight of 18y/o in US : n1 = 10, sample mean = 68.442, sample std deviation = 3.113
+Weight of 18 y/o in Nepal: n2 = 9, sample mean = 65.949 , sample std deviation = 3.106
+
+We can formulate 3 different hypothesis 
+1. H0: μ1 = μ2 => μ1- μ2 = 0 , H1: μ1 > μ2 => μ1 - μ2 > 0
+2. H0: μ1 = μ2 => μ1- μ2 = 0, H1: μ1 < μ2 => μ1 - μ2 < 0
+3. H0: μ1 = μ2 => μ1- μ2 = 0, H1: μ1 != μ2 => μ1 - μ2 != 0
+
+
+While conducting 2 sample test: 
+1. People involved in 1 sample can't be in another sample
+2. normally distributed
+3. Each person in the samples are independent.
+
+Now x1 ~ N( μ1, σ1^2) , so x1 = 1/n* sum from 1st element to n element in sample 1. 
+Now x2 ~ N( μ2, σ2^2) , so x2 = 1/n* sum from 1st element to n element in sample 2. 
+
+How does both sample means distribute with its difference. Since, each sample gaussian/normally distributed as it is linear combination of norma distribution so difference  is also normally distributed. so,
+
+x1 -x2 ~ N(μ1-μ2,sqroor of  (σ1^2 / n1 + σ2^2 / n2)) If in case σ1 or σ2 is unknown then use t-distribution.
+The formula of degree of freedom is different.
+
+
+
+
+
  
 
 SUMMARY OF HYPOTHESIS TESTING:
@@ -190,6 +221,7 @@ P-values: criterion for making decision based on data. if p-value < α, we rejec
 
 If you reject H0, you accept H1.
 If you didn't reject H0, then does that means H0 is true ? No, it means that there is no enough evidence to reject H0.
+
 
 
 
