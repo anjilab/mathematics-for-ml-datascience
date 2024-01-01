@@ -206,8 +206,8 @@ If H0 is true:
 t-statistic (degree of freedom) = 10-1 = 9, t = ( d̅- 0) / (sD / sqroot(10)) , T =2.321
 P-value = P(T > 2.321 |μD > 0) = 0.0227 < 0.05 So, reject null hypothesis. Since p-value is less than significance level, it means the observed value is less likely to be observed under null hypothesis is true.
 
-
-
+A/B TESTING:
+Application of 2 sample hypothesis testing. It is comparing 2 variations. (A/B). Example: Suppose a website has 2 designs. Design A and Design B. You made website in such a way that 80 individuals are shown design A and 20 to design B. In that design, simply buy button is placed in different section. We have to measure which section has more buying rate. here too, mean buying of each design is calculated. And t-statistic is observed. Rather than stating these are 2 different things, we simply tend to build idea of A/B testing around statistical analysis. First we should have variations A & B. Since, here population will be same so population mean will be same so  μ1 - μ2 will be zero but sample mean of A and B will be calculated. Once variations are designed, we randomly split the sample. We measure the outcomes for each group and determine a metric. We use statistical analysis to make a decision. We can use t-statistic to  make a decision. Sometimes, rather than mean, we may find question of proportion. For proportion, it would be binomial distribution, but after sampling it nearly distributes as normal distribution. 
 
 
  
